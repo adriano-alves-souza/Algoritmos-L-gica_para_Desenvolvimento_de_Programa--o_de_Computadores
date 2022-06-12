@@ -1,0 +1,15 @@
+c) Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula 
+VOLUME <- 3.14159 * R² *ALTURA.
+
+programa Cap03_Ex3c_Pg057
+
+const
+    PI = 3.14159
+var
+    R,A,V: real
+inicio
+    leia(R,A,v)
+    V <- PI * R² * A
+    escreva(V)
+fim
+

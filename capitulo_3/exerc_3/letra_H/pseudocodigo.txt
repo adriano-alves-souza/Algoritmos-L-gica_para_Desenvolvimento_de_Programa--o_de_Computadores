@@ -1,0 +1,11 @@
+h) Elaborar um programa que calcule e apresente o valor do volume de uma caixa retangular, utilizando afórmula
+VOLUME <- COMPRIMENTO* LARGURA* ALTURA.
+
+program Cap03_Ex3h_Pg057
+var
+    VOLUME,COMPRIMENTO,LARGURA,ALTURA: real
+inicio
+    leia(COMPRIMENTO,LARGURA,ALTURA)
+    VOLUME <- COMPRIMENTO * LARGURA * ALTURA
+    escreva(VOLUME)
+fim

@@ -1,0 +1,28 @@
+g) Ler quatro valores numéricos inteiros e apresentar o resultado das adições e das multiplicações
+utilizando o mesmo raciocínio aplicado quando do uso de propriedades distributivas para a
+máxima combinação possível entre as quatro variáveis. Não é para calcular a propriedade distributiva, apenas para usar a sua forma de combinação. Considerando a leitura de valores para as
+variáveis A, B, C e D, devem ser feitas seis adições e seis multiplicações, ou seja, deve ser combinada a variável A com avariável B, avariável A com a variável C, avariável A com avariável D.
+Depois é necessário combinar a variável B com a variável C e a variável B com a variável D e,
+por fim, a variável C será combinada com avariável D.
+
+program Cap03_Ex3g_Pg057
+var
+    A,B,C,D: inteiro
+    AD1,AD2,AD3,AD4,AD5,AD6: inteiro
+    M1,M2,M3,M4,M5,M6: inteiro
+inicio
+    leia(A,B,C,D)
+    AD1 <- A + b
+    AD2 <- A + C
+    AD3 <- A + D
+    AD4 <- B + C 
+    AD5 <- B + D
+    AD6 <- C + D
+    M1 <- A * B
+    M2 <- A * C
+    M3 <- A * D
+    M4 <- B * C
+    M5 <- B * D 
+    M6 <- C * D 
+    escreva(AD1,AD2,AD3,AD4,AD5,AD6,M1,M2,M3,M4,M5,M6)
+fim

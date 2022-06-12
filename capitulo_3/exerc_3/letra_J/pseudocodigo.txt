@@ -1,0 +1,10 @@
+j) Ler dois valores numéricos inteiros(representadospelas variáveis A e B) e apresentar o resultadodo quadrado da diferença do primeiro valor(variável A) em relação ao segundo valor(variávelB).
+program Cap03_Ex3j_Pg057
+var
+    A,B,DIFI,RESULT: inteiro
+inicio
+    leia(A,B)
+    DIFI <- A - B
+    RESULT <- DIFI * DIFI
+    escreva(RESULT)
+fim

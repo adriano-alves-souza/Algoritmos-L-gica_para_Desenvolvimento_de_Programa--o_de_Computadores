@@ -1,0 +1,9 @@
+i) Efetuar a leitura de um valor numérico inteiro e apresentar o resultado do valor lido elevado ao quadrado.
+program Cap03_Ex3i_Pg057
+var
+    X,RESULT: inteiro
+inicio
+    leia(X)
+    RESULT <- X * X
+    escreva(RESULT)
+fim

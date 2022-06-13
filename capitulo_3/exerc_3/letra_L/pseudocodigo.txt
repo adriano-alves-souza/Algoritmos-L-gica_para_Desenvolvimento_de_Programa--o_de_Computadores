@@ -1,0 +1,10 @@
+1) Elaborar um programa que apresente o valor da conversão em dólar (US$) de um valor lido em real
+(R$). O programa deve solicitar o valor da cotação do dólar e também a quantidade de reais disponível com ousuário.
+programa Cap03_Ex3l_Pg057
+var
+    COTAÇÃO,QTREAIS,RESULT:real
+inicio
+    leia(COTAÇÃO,QTREAIS)
+    RESULT <- QTREAIS / COTAÇÃO
+    escreva(RESULT)
+fim

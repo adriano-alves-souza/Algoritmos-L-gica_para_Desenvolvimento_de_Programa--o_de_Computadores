@@ -1,0 +1,10 @@
+m) Construir um programa que leia três valores numéricos inteiros (representados pelas variáveis A,
+B e C) e apresente como resultado final o valor da soma dos quadrados dos três valores lidos.
+program Cap03_Ex3m_Pg057
+var
+    A,B,C,RESULT: inteiro
+inicio
+    leia(A,B,C)
+    RESULT <- A² + B² + C²
+    escreva(RESULT)
+fim

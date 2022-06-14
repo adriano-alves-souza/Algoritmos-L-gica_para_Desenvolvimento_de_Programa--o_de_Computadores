@@ -1,0 +1,12 @@
+y) Construir um programa que leia um valor numérico inteiro e apresente como resultado os seus
+valores sucessor e antecessor.
+
+program Cap03_Ex3y_Pg057
+var
+    X,SUCESSOR,ANTECESSOR: inteiro
+inicio
+    leia(X)
+    SUCESSOR ← X + 1
+    ANTECESSOR ← X - 1
+    escreva(SUCESSOR,ANTECESSOR)
+fim

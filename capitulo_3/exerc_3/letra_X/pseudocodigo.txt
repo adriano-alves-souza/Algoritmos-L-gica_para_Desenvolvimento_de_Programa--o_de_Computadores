@@ -1,0 +1,10 @@
+x) Elaborar um programa que calcule uma raiz de base qualquer com índice qualquer.
+
+program Cap03_Ex3x_Pg057
+var
+    BASE,INDICE,RESULT:real
+inicio
+    leia(BASE,INDICE)
+    RESULT ← BASE ↑ (1/INDICE)
+    escreva(RESULT)
+fim

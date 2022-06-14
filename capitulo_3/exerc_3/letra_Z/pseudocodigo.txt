@@ -1,0 +1,12 @@
+z) Ler dois valores numéricos inteiros (representados pelas variáveis A e B) e apresentar o resultado
+do quadrado da divisão do primeiro valor (variável A) em relação ao segundo valor (variável B). 
+
+program Cap03_Ex3z_Pg057
+var
+    A,B:inteiro
+    RESULT:real
+inicio
+    leia(A,B)
+    RESULT ← (A/B)↑2
+    escreva(RESULT)
+fim

@@ -1,0 +1,11 @@
+w) Elaborar um programa que leia uma medida em pés e apresente o seu valor convertido em
+metros, lembrando que um pé mede 0,3048 metro, ou seja, um pé é igual a 30,48 centímetros.
+
+program Cap03_Ex3w_Pg057
+var
+    PES,RESULT: real
+inicio
+    leia(PES)
+    RESULT ← PES * 0.3048
+    escreva(RESULT)
+fim

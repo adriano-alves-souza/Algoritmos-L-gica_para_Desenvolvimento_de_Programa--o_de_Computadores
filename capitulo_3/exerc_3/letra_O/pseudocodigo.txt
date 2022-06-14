@@ -1,4 +1,6 @@
-O) Elaborar um programa que leia quatro valores numéricos inteiros (variáveis A, B, C e D). Ao finalo programa deve apresentar o resultado do produto (variável P) do primeiro com o terceiro valor,e o resultado da soma (variável S) do segundo com o quarto valor.
+O) Elaborar um programa que leia quatro valores numéricos inteiros (variáveis A, B, C e D). 
+Ao final o programa deve apresentar o resultado do produto (variável P) do primeiro com o terceiro valor,
+e o resultado da soma (variável S) do segundo com o quarto valor.
 
 program Cap03_Ex3o_Pg057
 var
@@ -6,6 +8,6 @@ var
 inicio
     leia(A,B,C,D)
     P <- A * C
-    S <- B * D
+    S <- B + D
     escreva(P,S)
 fim

@@ -4,6 +4,6 @@ var
     X,RESULT: inteiro
 inicio
     leia(X)
-    RESULT <- X * X
+    RESULT <- X↑2
     escreva(RESULT)
 fim

@@ -1,0 +1,14 @@
+s) Elaborar um programa que leia dois valores numéricos reais desconhecidos representados pelas
+variáveis A e B. Calcular e apresentar os resultados das quatro operações aritméticas básicas.
+
+program Cap03_Ex3s_Pg057
+var
+    A,B,AD,SUB,MT,DV:real
+inicio
+    leia(A,B)
+    AD <- A + B
+    SUB <- A - B
+    MT <- A * B
+    DV <- A / B
+    escreva(AD,SUB,MT,DV)
+fim

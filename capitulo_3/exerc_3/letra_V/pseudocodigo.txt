@@ -1,0 +1,11 @@
+v) Elaborar um programa que leia dois valores numéricos inteiros, os quais devem representar a
+base e o expoente de uma potência, calcule a potência e apresente o resultado obtido. 
+
+program Cap03_Ex3v_Pg057
+var
+    BASE,EXPOENTE,RESULT:inteiro
+inicio
+    leia(BASE,EXPOENTE)
+    RESULT ← BASE↑EXPOENTE
+    escreva(RESULT)
+fim

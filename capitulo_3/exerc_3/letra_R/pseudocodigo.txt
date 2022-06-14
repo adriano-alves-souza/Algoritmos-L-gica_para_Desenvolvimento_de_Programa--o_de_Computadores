@@ -1,0 +1,18 @@
+r) Em uma eleição sindical concorreram ao cargo de presidente três candidatos (representadospelas variáveis A,B e C). Durante a apuração dos votos foram computados votos nulos e em branco, além dos votos válidos para cada candidato. 
+Deve ser criado um programa de computador que faça a leitura da quantidade de votos válidos para cada candidato, além de também lera quantidade de votos nulos e em branco. Ao final o programa deve apresentar o número total de eleitores,considerando votos válidos,nulos e em branco; o percentual correspondente de votos válidos em relação à quantidade de eleitores; o percentual correspondente de votos válidosdo candidato A em relação à quantidade de eleitores; o percentual correspondente de votos válidos do candidato B em relação à quantidade de eleitores; o percentual correspondente de votos válidos do candidato C em relação à quantidade de eleitores; o percentual correspondente de votos nulos em relação à quantidade de eleitores;e por último o percentual correspondente de votos em branco em relação à quantidade de eleitores.
+
+program Cap03_Ex3r_Pg057
+    var
+        A,B,C,NULO,BRANCO,TE:inteiro
+        PCV,PCVA,PCVB,PCVC,PCVN,PCVBR:real
+inicio
+    leia(A,B,C,NULO,BRANCO)
+    TE <- A+B+C+NULO+BRANCO
+    PCV <- A+B+C / TE * 100
+    PCVA <- A / TE * 100
+    PCVB <- B / TE * 100
+    PCVC <- C / TE * 100
+    PCVN <- NULO / TE * 100
+    PCVBR <- BRANCO / TE * 100
+    escreva(TE,PCV,PCVA,PCVB,PCVC,PCVN,PCVBR)
+fim

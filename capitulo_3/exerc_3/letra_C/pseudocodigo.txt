@@ -9,7 +9,7 @@ var
     R,A,V: real
 inicio
     leia(R,A,v)
-    V <- PI * R² * A
+    V <- PI * R↑2 * A
     escreva(V)
 fim
 

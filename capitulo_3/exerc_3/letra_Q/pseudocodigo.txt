@@ -1,0 +1,12 @@
+q) Elaborar um programa que calcule e apresente o valor do resultado da área de uma circunferência (variável A). O programa deve solicitar a entrada do valor do raio da circunferência (variá-vel R).Para a execução deste problema utilize afórmula A <- 3.14159265 * R².
+
+program Cap03_Ex3q_Pg057
+Const
+    PI = 3.14159265
+var
+    A,R:real
+inicio
+    leia(R)
+    A <- PI * R↑2
+    escreva(A)
+fim

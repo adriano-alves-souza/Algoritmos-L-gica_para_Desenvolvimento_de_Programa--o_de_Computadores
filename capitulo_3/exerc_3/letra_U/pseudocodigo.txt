@@ -1,0 +1,13 @@
+u) Elaborar um programa de computador que calcule e apresente o valor do volume de uma esfera.
+Utilize afórmula VOLUME ← (4 / 3) * 3.14159 * (RAIO↑3).
+
+program Cap03_Ex3u_Pg057
+const 
+    PI = 3.14159
+var
+    VOLUME,RAIO:    real
+inicio
+    leia(RAIO)
+    VOLUME ← (4/3) * PI * (RAIO↑3)
+    escreva(VOLUME)
+fim

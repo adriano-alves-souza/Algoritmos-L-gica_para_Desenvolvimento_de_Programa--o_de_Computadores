@@ -1,0 +1,32 @@
+g) Fazer a leitura de quatro valores numéricos inteiros representados pelas variáveis A, B, C e D.
+Apresentar apenas os valores que sejam divisíveis por 2 e 3. 
+
+program Cap04_Ex3g_Pg098
+var
+    A,B,C,D,R1,R2: inteiro
+inicio
+    leia(A,B,C,D)
+
+    R1 ← A - 2 * (A div 2)
+    R2 ← A - 3 * (A div 3)
+    se(R1=0) .e. (R2=0) então
+        escreva(A)
+    fim_se
+
+    R1 ← B - 2 * (B div 2)
+    R2 ← B - 3 * (B div 3)
+    se(R1=0) .e. (R2=0) então
+        escreva(B)
+    fim_se
+
+    R1 ← C - 2 * (C div 2)
+    R2 ← C - 3 * (C div 3)
+    se(R1=0) .e. (R2=0) então
+        escreva(C)
+    fim_se
+    R1 ← D - 2 * (D div 2)
+    R2 ← D - 3 * (D div 3)
+    se(R1=0) .e. (R2=0) então
+        escreva(D)
+    fim_se
+fim

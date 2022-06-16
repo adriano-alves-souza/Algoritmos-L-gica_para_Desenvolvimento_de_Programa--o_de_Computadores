@@ -1,0 +1,41 @@
+i) Ler cinco valores numéricos inteiros (variáveis A, B, C, D e E), identificar e apresentar o maior e o
+menor valores informados. Não execute a ordenação dos valores como no exercício "f". 
+
+program Cap04_Ex3i_Pg098
+var
+    A,B,C,D,E,MAIOR,MENOR: inteiro
+inicio
+    leia(A,B,C,D,E)
+
+    MAIOR ← A
+    MENOR ← A
+    
+    se(MAIOR < B) então
+        MAIOR ← B
+    fim_se
+    se(MAIOR < C) então
+        MAIOR ← C
+    fim_se
+    se(MAIOR < D) então
+        MAIOR ← D
+    fim_se
+    se(MAIOR < E) então
+        MAIOR ← E
+    fim_se
+
+    se(MENOR > B) então
+        MENOR ← B
+    fim_se
+    se(MENOR > C) então
+        MENOR ← C
+    fim_se
+    se(MENOR > D) então
+        MENOR ← D
+    fim_se
+    se(MENOR > E) então
+        MENOR ← E
+    fim_se
+
+    escreva(MAIOR, MENOR)
+
+fim

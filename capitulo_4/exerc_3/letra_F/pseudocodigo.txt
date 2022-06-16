@@ -1,0 +1,28 @@
+f) Ler três valores inteiros representados pelas variáveis A, B e C e apresentar os valores lidos
+dispostos em ordem crescente. Dica: utilizar tomada de decisão sequencial e as ideias trabalhadas
+nos exercícios "g" (propriedade distributiva) e "f"(troca de valores) do capítulo 3.
+
+program Cap04_Ex3f_Pg098
+var
+    A,B,C,X: inteiro
+inicio
+    leia(A,B,C)
+    
+    se(A > B) então
+        X ← A
+        A ← B
+        B ← X
+    fim_se
+    se(A > C) então
+        X ← A
+        A ← C
+        C ← X
+    fim_se
+    se(B > C) então
+        X ← B
+        B ← C
+        C ← X
+    fim_se
+
+    escreva(A,B,C)
+fim

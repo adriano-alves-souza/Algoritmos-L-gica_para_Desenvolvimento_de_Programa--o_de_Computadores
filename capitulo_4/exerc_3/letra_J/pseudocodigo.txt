@@ -1,0 +1,15 @@
+j) Ler um valor numérico inteiro e apresentar uma mensagem informando se o valor fornecido é par
+ou ímpar. 
+
+program Cap04_Ex3j_Pg098
+var
+    N,R1: inteiro
+inicio
+    leia(N)
+    R1 ← N - 2 * (N div 2)
+    se(R1 = 0) então
+        escreva("PAR")
+    senão
+        escreva("IMPAR")
+    fim_se
+fim

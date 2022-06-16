@@ -1,0 +1,13 @@
+o) Ler um número inteiro qualquer e multiplicá-lo por dois. Apresentar o resultado da multiplicação
+somente se o resultado for maior que 30. 
+
+program Cap04_Ex3o_Pg098
+var
+    N,X: inteiro
+inicio
+    leia(N)
+    X ← N * 2
+    se (x > 30) então
+        escreva(X)
+    fim_se
+fim

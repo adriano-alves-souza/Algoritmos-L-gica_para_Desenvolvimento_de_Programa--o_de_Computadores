@@ -1,0 +1,16 @@
+k) Efetuar a leitura de um valor numérico inteiro que esteja na faixa de valores de 1 até 9. O
+programa deve apresentar a mensagem "O valor está na faixa permitida", caso o valor informado
+esteja entre 1 e 9. Se o valor estiver fora da faixa, o programa deve apresentar a mensagem "O
+valor está fora da faixa permitida". 
+
+program Cap04_Ex3k_Pg098
+var
+    N: inteiro
+inicio
+    leia(N)
+    se(N >= 1) .e. (N <= 9) então
+        escreva("O valor está na faixa permitida")
+    senão
+        escreva("O valor está fora da faixa permitida")
+    fim_se
+fim

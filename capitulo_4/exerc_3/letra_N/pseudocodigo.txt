@@ -1,0 +1,13 @@
+n) Efetuar a leitura de três valores inteiros desconhecidos representados pelas variáveis A, B e C.
+Somar os valores fornecidos e apresentar o resultado somente se for maior ou igual a 100. 
+
+program Cap04_Ex3n_Pg098
+var
+    A,B,C,X: inteiro
+inicio
+    leia(A,B,C)
+    X ← A + B + C
+    se (x >= 100) então
+        escreva(X)
+    fim_se
+fim

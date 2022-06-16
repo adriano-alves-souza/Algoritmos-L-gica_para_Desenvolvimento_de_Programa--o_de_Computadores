@@ -1,0 +1,15 @@
+a) Efetuar a leitura de dois valores numéricos inteiros representados pelas variáveis A e B e
+apresentar o resultado da diferença do maior valor pelo menor valor.
+
+program Cap04_Ex3a_Pg098
+var 
+    A,B,X: inteiro
+inicio
+    leia(A,B)
+    se (A > B) então
+        X ← A - B
+    senão
+        X ← B - A
+    fim_se
+    escreva(X)
+fim

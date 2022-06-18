@@ -1,0 +1,17 @@
+m) Elaborar umprograma que leia dez valores numéricos reais e apresente no final o somatório e a
+média dos valores lidos.
+
+program Cap05_Ex5.9m_Pg130
+var
+    I: inteiro
+    N,SOMA,MEDIA: real
+inicio
+    SOMA ← 0
+    para I de 1 ate 10 passo 1 faça
+        leia(N)
+        SOMA ← SOMA + N
+    fim_para
+
+    MEDIA ← SOMA / 10
+    escreva(SOMA, MEDIA)
+fim

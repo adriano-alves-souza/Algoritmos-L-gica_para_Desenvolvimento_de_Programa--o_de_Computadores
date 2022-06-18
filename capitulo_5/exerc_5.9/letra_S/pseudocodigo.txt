@@ -1,0 +1,20 @@
+s) Elaborar um programa que apresente o resultado inteiro da divisão de dois números quaisquer,
+representando o dividendo e o divisor da divisão a ser processada. Sugestão: para a elaboração
+do programa, não utilize o operador aritmético de divisão com quociente inteiro DIV. Use uma
+solução baseada em laço. O programa deve apresentar como resultado (quociente) quantas
+vezes o divisor cabe no dividendo.
+
+program Cap05_Ex5.9s_Pg130
+var
+    DIVID,DIVIS,QUOCIENTE: inteiro
+inicio
+    QUOCIENTE ← 0
+    leia(DIVID,DIVIS)
+
+    enquanto(DIVIS < DIVID) faça
+        DIVID ← DIVID - DIVIS
+        QUOCIENTE ← QUOCIENTE + 1
+    fim_enquanto
+    
+    escreva(QUOCIENTE)
+fim_se

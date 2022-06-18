@@ -1,0 +1,28 @@
+n) Elaborar um programa que leia sucessivamente valores numéricos e apresente no final
+o somatório, a média e o total de valores lidos. O programa deve ler os valores enquanto o
+usuário estiver fornecendo valores positivos. Ou seja, o programa deve parar quando o usuário
+fornecer um valor negativo (menor que zero).
+
+program Cap05_Ex5.9n_Pg130
+var
+    SOMA,I,N: inteiro
+    MEDIA: real
+inicio
+    SOMA ← 0
+    I ← 0
+    N ← 0
+    enquanto (I >= 0) faça
+        leia(N)
+        se(N >= 0) então
+            SOMA ← SOMA + N
+            I ← I + 1
+        fim_se
+    fim_enquanto
+
+    se(I > 0) então
+        MEDIA <- SOMA / I
+        escreva(SOMA, MEDIA, I)
+    senão
+        escreva("Nenhum valor digitado")
+    fim_se
+fim

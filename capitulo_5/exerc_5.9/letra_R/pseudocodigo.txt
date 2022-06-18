@@ -1,0 +1,30 @@
+r) Elaborar um programa que leia valores positivos inteiros até que um valor negativo seja
+informado. Ao final devem ser apresentados o maior e o menor valores informados pelo usuário.
+
+program Cap05_Ex5.9r_Pg130
+var
+    MAIOR,MENOR,I,N: inteiro
+inicio
+    I ← 1
+    MAIOR ← 0
+    MENOR ← 0
+    N ← 0
+    enquanto (N >= 0) faça
+        leia(N)
+        se(N >= 0) então
+            se(I = 1) então
+                MAIOR ← N
+                MENOR ← N
+            senão
+                se(MAIOR < N) então
+                    MAIOR ← N
+                fim_se
+                se(MENOR > N) então
+                    MENOR ← N
+                fim_se
+            fim_se
+            I ← I + 1
+        fim_se
+    fim_enquanto
+    escreva(MAIOR, MENOR)
+fim

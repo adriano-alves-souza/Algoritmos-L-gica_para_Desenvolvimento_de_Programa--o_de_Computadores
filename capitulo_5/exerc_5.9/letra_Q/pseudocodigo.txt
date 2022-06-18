@@ -1,0 +1,25 @@
+q) Escrever umprograma que possibilite calcular a área total em metros de uma residência com os
+cômodos sala, cozinha, banheiro, dois quartos, área de serviço, quintal, garagem, entre outros,
+que podem ser fornecidos ao programa. O programa deve solicitar a entrada do nome, da
+largura e do comprimento de um determinado cômodo. Em seguida, deve apresentar a área do
+cômodo lido e também uma mensagem solicitando ao usuário a confirmação de continuar
+calculando novos cômodos. Caso o usuário responda "NÃO", o programa deve apresentar o
+valor total acumulado da área residencial.
+
+program Cap05_Ex5.9q_Pg130
+var
+    AREA,TOTAL,LARGURA,COMPRIMENTO: real
+    NOME,RESP: cadeia
+inicio
+    TOTAL ← 0
+    RESP ← "sim"
+    enquanto(RESP = "sim") faça
+        leia(NOME,LARGURA,COMPRIMENTO)
+        AREA ← COMPRIMENTO * LARGURA
+        TOTAL ← TOTAL + AREA
+        escreva(NOME, AREA)
+        leia(RESP)
+    fim_enquanto
+
+    escreva(TOTAL)
+fim

@@ -1,0 +1,18 @@
+o) Construir um programa que apresente como resultado a fatorial dos valores ímpares situados na
+faixa numérica de 1 até 10
+
+program Cap05_Ex5.9o_Pg130
+var
+    FAT,I,J,R: inteiro
+inicio
+    para I de 1 ate 10 passo 1 faça
+        R ← I - 2 * (I div 2)
+        se(R <> 0) então
+            FAT ← 1
+            para J de 1 ate I passo 1 faça
+                FAT ← FAT * J
+            fim_para
+            escreva(FAT)
+        fim_se
+    fim_para
+fim

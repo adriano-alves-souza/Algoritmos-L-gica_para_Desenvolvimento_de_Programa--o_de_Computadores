@@ -1,0 +1,18 @@
+h) Escrever um programa que apresente como resultado a potência de uma base qualquer elevada
+a um expoente qualquer, ou seja, de B E, em que B é o valor da base e E o valor do expoente.
+Considere apenas a entrada de valores inteiros e positivos, ou seja, de valores naturais.
+Sugestão: não utilize o formato "base ↑ expoente", pois é uma solução muito trivial. Use a
+técnica de laço, em que o valor da base deve ser multiplicado o número de vezes determinado
+no expoente.
+
+program Cap05_Ex5.9h_Pg130
+var
+    I,B,E,X:inteiro
+inicio
+    leia(B,E)
+    X ← 1
+    para I de 1 ate E passo 1 faça
+        X ← X * B
+    fim_para
+    escreva(X)
+fim

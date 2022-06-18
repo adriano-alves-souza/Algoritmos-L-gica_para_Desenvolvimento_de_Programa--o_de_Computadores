@@ -1,0 +1,16 @@
+f) Construir um programa que apresente todos os valores numéricos divisíveis por 4 e menores que
+200.Sugestão: a variável que controla ocontador do laço deve ser iniciada com valor 1.
+
+program Cap05_Ex5.9f_Pg130
+var
+    I,R:inteiro
+inicio
+    I ← 1
+    enquanto(I < 200) faça
+        R ← I - 4 * (I div 4)
+        se(R = 0) então
+            escreva(I)
+        fim_se
+        I ← I + 1
+    fim_enquanto
+fim

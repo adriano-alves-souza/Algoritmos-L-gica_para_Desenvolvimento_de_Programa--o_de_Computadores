@@ -1,0 +1,13 @@
+b) Elaborar um programa que mostre os resultados da tabuada de um número qualquer, a qual
+deve ser apresentada de acordo com sua forma tradicional.
+
+program Cap05_Ex5.9b_Pg130
+var
+    N,I,X:inteiro
+inicio
+    leia(N)
+    para I de 1 ate N passo 1 faça
+        X ← N * N
+        escreva(I,"x",N,"=",X)
+    fim_para
+fim

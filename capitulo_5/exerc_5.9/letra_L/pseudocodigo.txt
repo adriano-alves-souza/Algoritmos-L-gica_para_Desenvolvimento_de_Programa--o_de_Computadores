@@ -1,0 +1,17 @@
+1) Elaborar um programa que leia quinze valores numéricos inteiros e no final apresente o
+somatório da fatorial de cada valor lido.
+
+program Cap05_Ex5.9l_Pg130
+var
+    SOMA,I,J,FAT: inteiro
+inicio
+    SOMA ← 0
+    para I de 1 ate 15 passo 1 faça
+        FAT ← 1
+        para J de 1 ate I passo 1 faça
+            FAT ← FAT * J
+        fim_para
+        SOMA ← SOMA + FAT
+    fim_para
+    escreva(SOMA)
+fim

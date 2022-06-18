@@ -1,0 +1,13 @@
+c) Construir um programa que apresente a soma dos cem primeiros números naturais
+(1+2+3+...+98+99+100).
+
+program Cap05_Ex5.9c_Pg130
+var
+    SOMA,I: inteiro
+inicio
+    SOMA ← 0
+    para I de 1 ate 100 passo 1 faça
+        SOMA ← SOMA + I
+    fim_para
+    escreva(SOMA)
+fim

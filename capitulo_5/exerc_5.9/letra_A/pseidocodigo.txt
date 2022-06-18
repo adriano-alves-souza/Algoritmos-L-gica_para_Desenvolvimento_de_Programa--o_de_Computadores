@@ -1,0 +1,12 @@
+a) Elaborar um programa que apresente como resultado os quadrados dos números inteiros
+existentes na faixa de valores de 15 a 200
+
+program Cap05_Ex5.9a_Pg130
+var
+    I,X: inteiro
+inicio
+    para I de 15 ate 200 passo 1 faça
+        X ← I ↑ 2
+        escreva(X)
+    fim_para
+fim

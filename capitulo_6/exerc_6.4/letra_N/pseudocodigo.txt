@@ -1,0 +1,25 @@
+q) Elaborar um programa que leia 15 elementos reais para uma matriz A de uma dimensão do tipo
+vetor. Construir uma matriz B de mesmo tipo e dimensão, observando a seguinte lei de
+formação: "todo elemento da matriz A que possuir índice par deve ter seu elemento dividido por
+2; caso contrário, o elemento da matriz A deve ser multiplicado por 1.5". Apresentar os
+elementos da matriz B.
+
+program Cap06_Ex6.4q_Pg144
+var
+    A,B: conjunto[1..15] de inteiro
+    I,R: inteiro
+inicio
+    para I de 1 ate 12 passo 1 faça
+        leia(A[I])
+        R ← I - 2 * (I div 2)
+        se(R = 0) então
+            B[I] ← A[I] / 2
+        senão
+            B[I] ← A[I] * 1.5
+        fim_se
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        escreva(B[I])
+    fim_para
+fim

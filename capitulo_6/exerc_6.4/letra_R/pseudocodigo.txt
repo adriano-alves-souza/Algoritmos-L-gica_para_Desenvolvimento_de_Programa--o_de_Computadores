@@ -1,0 +1,30 @@
+r) Elaborar um programa que leia seis elementos (valores inteiros) para as matrizes A e B de uma
+dimensão do tipo vetor. Construir as matrizes C e D de mesmo tipo e dimensão. A matriz C
+deve ser formada pelos elementos de índice ímpar das matrizes A e B e a matriz D deve ser
+formada pelos elementos de índice par das matrizes A e B. Apresentar os elementos das
+matrizes C e D.
+
+program Cap06_Ex6.4r_Pg144
+var
+    A,B,C,D: conjunto[1..6] de inteiro
+    I,K,J,R: inteiro
+inicio
+    J ← 1
+    K ← 1
+    para I de 1 ate 6 passo 1 faça
+        leia(A[I],B[I])
+
+        R ← I - 2 * (I div 2)
+        se(R = 0) então
+            D[K] ← A[I]
+            D[3+K] ← B[I]
+        senão
+            C[J] ← A[I]
+            C[3+J] ← B[I]
+        fim_Se
+    fim_para
+
+    para I de 1 ate 6 passo 1 faça 
+        escreva(C[I], D[I])
+    fim_para
+fim

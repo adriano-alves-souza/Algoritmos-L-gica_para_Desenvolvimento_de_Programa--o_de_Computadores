@@ -1,0 +1,24 @@
+p) Elaborar um programa que leia 12 elementos inteiros para uma matriz A de uma dimensão do
+tipo vetor. Construir uma matriz B de mesmo tipo e dimensão, observando a seguinte lei de
+formação: "todo elemento da matriz A que for ímpar deve ser multiplicado por 2; caso contrário,
+o elemento da matriz A deve permanecer constante". Apresentar os elementos da matriz B.
+
+program Cap06_Ex6.4p_Pg144
+var
+    A,B: conjunto[1..12] de inteiro
+    I,R: inteiro
+inicio
+    para I de 1 ate 12 passo 1 faça
+        leia(A[I])
+        R ← A[I] - 2 * (A[I] div 2)
+        se(R <> 0) então
+            B[I] ← A[I] * 2
+        senão
+            B[I] ← A[I]
+        fim_se
+    fim_para
+
+    para I de 1 ate 12 passo 1 faça
+        escreva(B[I])
+    fim_para
+fim

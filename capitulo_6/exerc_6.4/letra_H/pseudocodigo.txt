@@ -1,0 +1,21 @@
+h) Elaborar um programa que leia 20 elementos do tipo real em uma matriz A unidimensional e
+construir uma matriz B de mesma dimensão com os mesmos elementos armazenados na matriz
+A, porém de forma invertida. Ou seja, o primeiro elemento da matriz A passa a ser o último da
+matriz B, o segundo elemento da matriz A passa a ser o penúltimo da matriz B e assim por
+diante. Apresentar os elementos das matrizes A e B.
+
+program Cap06_Ex6.4h_Pg143
+var
+    A,B: conjunto[1..20] de real
+    I: inteiro
+inicio
+    para I de 1 ate 20 passo 1 faça
+        leia(A[I])
+        B[21-I] ← A[I]
+    fim_para
+
+    para I de 1 ate 20 passo 1 faça
+        escreva(A[I],B[I])
+    fim_para
+
+fim

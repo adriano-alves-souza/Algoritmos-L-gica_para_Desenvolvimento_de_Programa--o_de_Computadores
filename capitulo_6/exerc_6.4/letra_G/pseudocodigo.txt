@@ -1,0 +1,26 @@
+g) Elaborar um programa que leia duas matrizes do tipo vetor para o armazenamento de nomes de
+pessoas, sendo a matriz A com 20 elementos e a matriz B com 30 elementos. Construir uma
+matriz C, sendo esta a junção das matrizes A e B. Desta forma, a matriz C deve ter a
+capacidade de armazenar 50 elementos. Apresentar os elementos da matriz C.
+
+program Cap06_Ex6.4g_Pg143
+var
+    A: conjunto[1..20] de cadeia
+    B: conjunto[1..30] de cadeia
+    c: conjunto[1..50] de cadeia
+    I: inteiro
+inicio
+    para I de 1 ate 20 passo 1 faça
+        leia(A[I])
+        C[I] ← A[I]
+    fim_para
+
+    para I de 1 ate 30 passo 1 faça
+        leia(B[I])
+        C[20+I] ← B[I]
+    fim_para
+
+    para I de 1 ate 50 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

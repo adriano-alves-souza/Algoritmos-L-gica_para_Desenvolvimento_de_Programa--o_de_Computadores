@@ -1,0 +1,19 @@
+y) Escrever um programa que leia uma matriz A de uma dimensão com 15 elementos numéricos
+inteiros. Apresentar o total de elementos pares existentes na matriz.
+
+program Cap06_Ex6.4y_Pg145
+var
+    A: conjunto[1..15] de inteiro
+    I,R,PAR: inteiro
+inicio
+    PAR ← 0
+    para I de 1 ate 15 passo 1 faça
+        leia(A[i])
+        R ← N - 2 * (N div 2)
+        se(R = 0) então
+            PAR ← PAR + 1
+        fim_Se
+    fim_para
+
+    escreva(PAR)
+fim

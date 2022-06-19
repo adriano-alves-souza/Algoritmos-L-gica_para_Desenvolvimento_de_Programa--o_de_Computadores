@@ -1,0 +1,19 @@
+w) Elaborar um programa que leia duas matrizes A e B de uma dimensão do tipo vetor com dez
+elementos inteiros cada. Construir uma matriz C de mesmo tipo e dimensão que seja formada
+pelo quadrado da soma dos elementos correspondentes nas matrizes A e B. Apresentar os
+elementos da matriz C.
+
+program Cap06_Ex6.4w_Pg145
+var
+    A,B,C: conjunto[1..10] de inteiro
+    I: inteiro
+inicio
+    para I de 1 ate 10 passo 1 faça
+        leia(A[I],B[I])
+        C[I] ← (A[I] + B[I]) ↑ 2
+    fim_para
+
+    para I de 1 ate 10 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

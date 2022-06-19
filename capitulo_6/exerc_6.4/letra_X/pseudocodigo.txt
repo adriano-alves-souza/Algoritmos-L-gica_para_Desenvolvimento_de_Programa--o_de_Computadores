@@ -1,0 +1,21 @@
+x) Elaborar um programa que leia uma matriz A de uma dimensão com seis elementos do tipo real.
+Construir uma matriz B, em que cada posição de índice ímpar da matriz B deve ser atribuída
+com um elemento de índice par existente na matriz A e cada posição de índice par da matriz B
+deve ser atribuída com um elemento de índice ímpar existente na matriz A. Apresentar os
+elementos das duas matrizes.
+
+program Cap06_Ex6.4x_Pg145
+var
+    A,B: conjunto[1..6] de real
+    I,R: inteiro
+inicio
+    para I de 1 ate 6 passo 1 faça
+        leia(A[i])
+        R ← I - 2 * (I div 2)
+        se(R = 0) então
+            B[I-1] ← A[I]
+        senão
+            B[I+1] ← A[I]
+        fim_Se
+    fim_para
+fim

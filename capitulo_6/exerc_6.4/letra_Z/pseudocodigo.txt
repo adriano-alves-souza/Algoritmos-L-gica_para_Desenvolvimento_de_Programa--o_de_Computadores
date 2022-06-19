@@ -1,0 +1,22 @@
+z) Elaborar um programa que leia uma matriz A de uma dimensão com dez elementos numéricos
+inteiros. Apresentar o total de elementos ímpares existentes na matriz e também o percentual
+do valor total de números ímpares em relação à quantidade total de elementos armazenados na
+matriz
+
+program Cap06_Ex6.4z_Pg145
+var
+    A: conjunto[1..10] de inteiro
+    I,R,IMPAR: inteiro
+    PERC: real
+inicio
+    IMPAR ← 0
+    para I de 1 ate 10 passo 1 faça
+        leia(A[i])
+        R ← N - 2 * (N div 2)
+        se(R <> 0) então
+            IMPAR ← IMPAR + 1
+        fim_Se
+    fim_para
+    PERC ← IMPAR / 10 * 100
+    escreva(IMPAR, PERC)
+fim

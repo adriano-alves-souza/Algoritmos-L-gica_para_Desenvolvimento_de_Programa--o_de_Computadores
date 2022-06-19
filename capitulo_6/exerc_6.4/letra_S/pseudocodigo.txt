@@ -1,0 +1,45 @@
+s) Elaborar um programa que leia duas matrizes A e B de uma dimensão com seis elementos. A
+matriz A deve aceitar apenas a entrada de valores pares, enquanto a matriz B deve aceitar
+apenas a entrada de valores ímpares. A entrada das matrizes deve ser validada pelo programa
+e não pelo usuário. Construir uma matriz C que seja o resultado da junção das matrizes A e B,
+de modo que a matriz C contenha 12 elementos. Apresentar os elementos da matriz C.
+
+program Cap06_Ex6.4s_Pg144
+var
+    A,B: conjunto[1..6] de inteiro
+    C: conjunto[1..12] de inteiro
+    I,N,R: inteiro
+inicio
+    I ← 1
+    enquanto(I <= 6) faça
+        leia(N)
+        R ← N - 2 * (N div 2)
+        se(R = 0) então
+            A[I] ← N
+            I ← I + 1
+        senão
+            escreva("Digite somente numeros pares")
+        fim_Se
+    fim_enquanto
+
+    I ← 1
+    enquanto(I <= 6) faça
+        leia(N)
+        R ← N - 2 * (N div 2)
+        se(R <> 0) então
+            B[I] ← N
+            I ← I + 1
+        senão
+            escreva("Digite somente numeros impares")
+        fim_Se
+    fim_enquanto
+
+    para I de 1 ate 6 passo 1 faça
+        C[I] ← A[I]
+        C[6+I] ← B[I]
+    fim_para
+
+    para I de 1 ate 12 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

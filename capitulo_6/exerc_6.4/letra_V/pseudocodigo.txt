@@ -1,0 +1,23 @@
+v) Construir um programa que leia uma matriz A de uma dimensão do tipo vetor com 30 elementos
+do tipo inteiro. Ao final do programa, apresentar a quantidade de valores pares e ímpares
+existentes na referida matriz.
+
+program Cap06_Ex6.4v_Pg145
+var
+    A: conjunto[1..30] de inteiro
+    I,R,PAR,IMPAR: inteiro
+inicio
+    PAR ← 0
+    IMPAR ← 0
+    para I de 1 ate 30 passo 1 faça
+        leia(A[i])
+        R ← N - 2 * (N div 2)
+        se(R = 0) então
+            PAR ← PAR + 1
+        senão
+            IMPAR ← IMPAR + 1
+        fim_Se
+    fim_para
+
+    escreva(PAR, IMPAR)
+fim

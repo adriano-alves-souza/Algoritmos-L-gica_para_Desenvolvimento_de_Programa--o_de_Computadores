@@ -1,0 +1,47 @@
+u) Elaborar um programa que leia duas matrizes A e B de uma dimensão com 12 elementos. A
+matriz A deve aceitar apenas a entrada de valores divisíveis por 2 ou 3, enquanto a matriz B
+deve aceitar apenas a entrada de valores que não sejam múltiplos de 5. A entrada das matrizes
+deve ser validada pelo programa e não pelo usuário. Construir uma matriz C que seja o
+resultado da junção das matrizes A e B, de forma que contenha 24 elementos. Apresentar os
+elementos da matriz C.
+
+program Cap06_Ex6.4u_Pg144
+var
+    A,B: conjunto[1..12] de inteiro
+    C: conjunto[1..24] de inteiro
+    I,N,R1,R2: inteiro
+inicio
+    I ← 1
+    enquanto(I <= 12) faça
+        leia(N)
+        R1 ← N - 2 * (N div 2)
+        R2 ← N - 3 * (N div 3)
+        se(R1 = 0).ou.(R2 = 0) então
+            A[I] ← N
+            I ← I + 1
+        senão
+            escreva("Digite somente numeros divisíveis por 2 e 3")
+        fim_Se
+    fim_enquanto
+
+    I ← 1
+    enquanto(I <= 12) faça
+        leia(N)
+        R ← N - 5 * (N div 5)
+        se .não.(R = 0) então
+            B[I] ← N
+            I ← I + 1
+        senão
+            escreva("Digite somente numeros não multiplos de 5")
+        fim_Se
+    fim_enquanto
+
+    para I de 1 ate 12 passo 1 faça
+        C[I] ← A[I]
+        C[12+I] ← B[I]
+    fim_para
+
+    para I de 1 ate 24 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

@@ -1,0 +1,22 @@
+e) Elaborar um programa que leia uma matriz A do tipo vetor com 15 elementos inteiros. Construir
+uma matriz B de mesmo tipo, e cada elemento da matriz B deve ser o resultado da fatorial
+correspondente de cada elemento da matriz A. Apresentar as matrizes A e B.
+
+program Cap06_Ex6.4e_Pg143
+var
+    A,B: conjunto[1..15] de inteiro
+    I,J,FAT: inteiro
+inicio
+    para I de 1 ate 15 passo 1 faça
+        leia(A[I])
+        FAT ← 1
+        para J de 1 ate A[I] passo 1 faça
+            FAT ← FAT * J
+        fim_para
+        B[I] ← FAT
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        escreva(A[I],B[I])
+    fim_para
+fim

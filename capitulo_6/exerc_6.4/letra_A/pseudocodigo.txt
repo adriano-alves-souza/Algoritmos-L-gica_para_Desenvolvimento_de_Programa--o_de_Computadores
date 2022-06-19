@@ -1,0 +1,16 @@
+a) Elaborar um programa que efetue a leitura de dez nomes de pessoas em uma matriz A do tipo
+vetor e apresente-os em seguida.
+
+program Cap06_Ex6.4a_Pg143
+var
+    A: conjunto[1..10] de cadeia
+    I: inteiro
+inicio
+    para I de 1 ate 10 passo 1 faça
+        leia(A[I])
+    fim_para
+
+     para I de 1 ate 10 passo 1 faça
+        escreva(A[I])
+    fim_para
+fim

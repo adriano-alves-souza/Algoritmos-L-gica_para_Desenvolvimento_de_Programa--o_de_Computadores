@@ -1,0 +1,20 @@
+c) Escrever um programa que leia duas matrizes (denominadas A e B) do tipo vetor com
+20 elementos reais. Construir uma matriz C, sendo cada elemento da matriz C a subtração de
+um elemento correspondente da matriz A com um elemento correspondente da matriz B, ou
+seja, a operação de processamento deve estar baseada na operação C[I] ← A[I] - B[I]. Ao final,
+apresentar os elementos da matriz C.
+
+program Cap06_Ex6.4c_Pg143
+var
+    A,B,C: conjunto[1..20] de real
+    I: inteiro
+inicio
+    para I de 1 ate 20 passo 1 faça
+        leia(A[I],B[I])
+        C[I] ← A[I] - B[I]
+    fim_para
+
+    para I de 1 ate 20 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

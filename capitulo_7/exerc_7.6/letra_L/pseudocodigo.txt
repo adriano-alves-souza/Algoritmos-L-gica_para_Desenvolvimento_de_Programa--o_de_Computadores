@@ -1,0 +1,42 @@
+l) Construir um programa que leia três matrizes A, B e C de uma dimensão do tipo vetor com 15
+elementos reais cada. Construir uma matriz D de mesmo tipo e dimensão que seja formada pelo
+cubo da soma dos elementos correspondentes às matrizes A, B e C. Apresentar a matriz D em
+ordem crescente.
+
+program Cap067_Ex7.6l_Pg173
+var
+    A,B,C,D: conjunto[1..15] de real
+    I,J: inteiro
+    AUX: real
+
+inicio
+    para I de 1 ate 15 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        leia(C[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        D[I] ← (A[I]+B[I]+C[I]) ↑3
+    fim_para
+
+    para I de 1 ate 14 passo 1 faça
+        para J de I+1 ate 15 passo 1 faça
+            se(D[I] > D[J]) então
+                AUX ← D[I]
+                D[I] ← D[J]
+                D[J] ← AUX
+            fim_Se
+        fim_para
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        escreva(D[I])
+    fim_para
+fim

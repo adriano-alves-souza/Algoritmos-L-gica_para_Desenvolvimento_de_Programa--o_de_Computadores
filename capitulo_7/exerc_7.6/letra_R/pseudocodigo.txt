@@ -1,0 +1,44 @@
+r) Elaborar um programa que efetue a leitura de dados em duas matrizes (A e B) de uma
+dimensão do tipo vetor, sendo a matriz A com dez elementos e a matriz B com cinco elementos.
+Os elementos a serem armazenados nas matrizes devem ser do tipo cadeia. Construir uma
+matriz C com a capacidade de armazenar um total de 15 elementos e executar a junção das
+matrizes A e B na matriz C.Apresentar os dados da matriz C em ordem alfabética descendente.
+
+program Cap067_Ex7.6r_Pg173
+var
+    A: conjunto[1..10] de cadeia
+    B: conjunto[1..5] de cadeia
+    C: conjunto[1..15] de cadeia
+    I,J,AUX: inteiro
+inicio
+    para I de 1 ate 10 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 10 passo 1 faça
+        se(I <= 5) então
+            C[I] ← A[I]
+            C[10+I] ← B[I]
+        senão
+            C[I] ← A[I]
+        fim_Se
+    fim_para
+
+    para I de 1 ate 14 passo 1 faça
+        para J de I+1 ate 15 passo 1 faça
+            se(C[I] < C[J]) então
+                AUX ← C[I]
+                C[I] ← C[J]
+                C[J] ← AUX
+            fim_Se
+        fim_para
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        escreva(C[I])
+    fim_para
+fim

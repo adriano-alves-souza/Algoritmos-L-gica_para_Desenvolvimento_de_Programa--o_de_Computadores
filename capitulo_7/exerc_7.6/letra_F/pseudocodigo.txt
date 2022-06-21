@@ -1,0 +1,43 @@
+f) Elaborar um programa que leia 30 elementos numéricos reais em uma matriz A do tipo vetor.
+Construir uma matriz B de mesmo tipo, observando a seguinte lei de formação: todo elemento
+da matriz B deve ser o cubo do elemento correspondente da matriz A. Montar o trecho de
+pesquisa sequencial para pesquisar os elementos armazenados na matriz B.
+
+program Cap067_Ex7.6f_Pg173
+var
+    A,B: conjunto[1..30] de real
+    I: inteiro
+    PESQ: real
+    RESP: cadeia
+    ACHA: logico
+inicio
+    para I de 1 ate 30 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 30 passo 1 faça
+        B[I] ← A[I] ↑ 3
+    fim_para
+
+    RESP ← "SIM"
+    enquanto(RESP = "SIM") faça
+        leia(PESQ)
+        I ← 1
+        ACHA ← .F.
+        enquanto(I <= 30) .e. (ACHA = .F.) faça
+            se(PESQ = B[I]) então
+                ACHA ← .V.
+            senão
+                I ← I + 1
+            fim_Se
+        fim_enquanto
+
+        se(ACHA = .V.) então
+            escreva("valor ",PESQ," posição ", I)
+        senão
+            escreva("valor ",PESQ," não encontrado")
+        fim_Se
+
+        leia(RESP)
+    fim_enquanto
+fim

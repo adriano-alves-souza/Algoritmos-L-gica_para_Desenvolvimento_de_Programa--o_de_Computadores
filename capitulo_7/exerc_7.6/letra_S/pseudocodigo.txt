@@ -1,0 +1,36 @@
+s) Elaborar um programa que leia dez elementos numéricos reais em uma matriz A do tipo vetor e
+apresente esses elementos por meio de pesquisa sequencial.
+
+program Cap067_Ex7.6s_Pg173
+var
+    A: conjunto[1..10] de real
+    I: inteiro
+    PESQ: real
+    RESP: cadeira
+inicio
+    para I de 1 ate 10 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    RESP ← "SIM"
+    enquanto(RESP = "SIM") faça
+        leia(PESQ)
+        I ← 1
+        ACHA ← .F.
+        enquanto(I <= 10) .e. (ACHA = .F.) faça
+            se(PESQ = A[I]) então
+                ACHA ← .V.
+            senão
+                I ← I + 1
+            fim_Se
+        fim_enquanto
+
+        se(ACHA = .V.) então
+            escreva("valor ",PESQ," posição ", I)
+        senão
+            escreva("valor ",PESQ," não encontrado")
+        fim_Se
+
+        leia(RESP)
+    fim_enquanto
+fim

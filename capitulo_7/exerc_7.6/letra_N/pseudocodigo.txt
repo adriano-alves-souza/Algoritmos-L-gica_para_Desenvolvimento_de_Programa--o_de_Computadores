@@ -1,0 +1,66 @@
+n) Elaborar um programa que leia três matrizes A, B e C de uma dimensão do tipo vetor com 15
+elementos inteiros cada. Construir uma matriz D de mesmo tipo e dimensão que seja formada
+pela soma dos elementos correspondentes às matrizes A, B e C. Montar o trecho de pesquisa
+binária para pesquisar os elementos existentes na matriz D.
+
+program Cap067_Ex7.6n_Pg173
+var
+    A,B,C,D: conjunto[1..15] de inteiro
+    I,J,AUX,PESQ,COMEÇO,FINAL,MEIO: inteiro
+    RESP: cadeira
+    ACHA: logico
+inicio
+    para I de 1 ate 15 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        leia(C[I])
+    fim_para
+
+    para I de 1 ate 15 passo 1 faça
+        D[I] ← A[I] + B[I] + C[I]
+    fim_para
+
+    para I de 1 ate 14 passo 1 faça
+        para J de I+1 ate 15 passo 1 faça
+            se(D[I] > D[J]) então
+                AUX ← D[I]
+                D[I] ← D[J]
+                D[J] ← AUX
+            fim_Se
+        fim_para
+    fim_para
+
+    RESP ← "SIM"
+    enquanto(RESP = "SIM") faça
+        leia(PESQ)
+        COMEÇO ← 1
+        FINAL ← 15
+        ACHA ← .F.
+        enquanto(COMEÇO <= FINAL) .e. (ACHA = .F.) faça
+            MEIO ← (COMEÇO + FINAL) div 2
+            se(PESQ = D[MEIO]) então
+                ACHA ← .V.
+            senão
+                se(PESQ < D[MEIO]) então
+                    FINAL ← MEIO - 1
+                senão
+                    COMEÇO ← MEIO + 1
+                fim_Se
+            fim_Se
+        fim_enquanto
+
+        se(ACHA = .V.) então
+            escreva("valor ",PESQ," posição ", MEIO)
+        senão
+            escreva("valor ",PESQ," não encontrado")
+        fim_Se
+
+        leia(RESP)
+    fim_enquanto
+fim

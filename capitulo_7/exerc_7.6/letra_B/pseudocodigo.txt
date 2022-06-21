@@ -1,0 +1,58 @@
+b) Elaborar um programa que leia oito elementos numéricos inteiros em uma matriz A de uma
+dimensão do tipo vetor. Construir uma matriz Bde mesma dimensão e tipo com os elementos da
+matriz A multiplicados por 5. Montar uma rotina de pesquisa binária, para pesquisar os elementos
+armazenados na matriz B.
+
+program Cap067_Ex7.6b_Pg173
+var
+    A,B: conjunto[1..8] de inteiro
+    I,J,AUX,PESQ,COMEÇO,FINAL,MEIO: inteiro
+    RESP: cadeira
+    ACHA: logico
+inicio
+    para I de 1 ate 8 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 8 passo 1 faça
+        B[I] ← A[I] * 5
+    fim_para
+
+    para I de 1 ate 7 passo 1 faça
+        para J de I+1 ate 8 passo 1 faça
+            se(B[I] > B[J]) então
+                AUX ← B[I]
+                B[I] ← B[J]
+                B[J] ← AUX
+            fim_Se
+        fim_para
+    fim_para
+
+    RESP ← "SIM"
+    enquanto(RESP = "SIM") faça
+        leia(PESQ)
+        COMEÇO ← 1
+        FINAL ← 8
+        ACHA ← .F.
+        enquanto(COMEÇO <= FINAL) .e. (ACHA = .F.) faça
+            MEIO ← (COMEÇO + FINAL) div 2
+            se(PESQ = B[MEIO]) então
+                ACHA ← .V.
+            senão
+                se(PESQ < B[MEIO]) então
+                    FINAL ← MEIO - 1
+                senão
+                    COMEÇO ← MEIO + 1
+                fim_Se
+            fim_Se
+        fim_enquanto
+
+        se(ACHA = .V.) então
+            escreva("valor ",PESQ," posição ", MEIO)
+        senão
+            escreva("valor ",PESQ," não encontrado")
+        fim_Se
+
+        leia(RESP)
+    fim_enquanto
+fim

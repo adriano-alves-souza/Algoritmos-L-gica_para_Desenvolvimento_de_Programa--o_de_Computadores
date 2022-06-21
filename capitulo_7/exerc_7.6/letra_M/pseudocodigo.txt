@@ -1,0 +1,47 @@
+m) Elaborar um programa que leia duas matrizes A e B de uma dimensão do tipo vetor com 12
+elementos reais cada. Construir uma matriz C de mesmo tipo e dimensão que seja formada pelo
+produto de cada elemento correspondente às matrizes A e B. Montar o trecho de pesquisa
+sequencial para pesquisar os elementos existentes na matriz C.
+
+program Cap067_Ex7.6m_Pg173
+var
+    A,B,C: conjunto[1..12] de real
+    I,J: inteiro
+    PESQ: real
+    ACHA: logico
+    RESP: cadeia
+inicio
+    para I de 1 ate 12 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 12 passo 1 faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 12 passo 1 faça
+        C[I] ← A[I] * B[I] 
+    fim_para
+
+    RESP ← "SIM"
+    enquanto(RESP = "SIM") faça
+        leia(PESQ)
+        I ← 1
+        ACHA ← .F.
+        enquanto(I <= 12) .e. (ACHA = .F.) faça
+            se(PESQ = C[I]) então
+                ACHA ← .V.
+            senão
+                I ← I + 1
+            fim_Se
+        fim_enquanto
+
+        se(ACHA = .V.) então
+            escreva("valor ",PESQ," posição ", I)
+        senão
+            escreva("valor ",PESQ," não encontrado")
+        fim_Se
+
+        leia(RESP)
+    fim_enquanto
+fim

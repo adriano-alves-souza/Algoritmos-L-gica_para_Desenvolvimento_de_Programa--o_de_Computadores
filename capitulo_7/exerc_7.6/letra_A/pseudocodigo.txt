@@ -1,7 +1,7 @@
 a) Elaborar um programa que leia 12 elementos numéricos inteiros em uma matriz do tipo vetor.
 Coloque-os em ordem decrescente e apresente os elementos ordenados.
 
-program Cap067_Ex7.6a_Pg173
+program Cap07_Ex7.6a_Pg173
 var
     A: conjunto[1..12] de inteiro
     I,J,AUX: inteiro

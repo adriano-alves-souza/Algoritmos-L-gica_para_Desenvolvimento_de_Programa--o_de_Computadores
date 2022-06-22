@@ -3,7 +3,7 @@ elementos reais cada. Construir uma matriz C de mesmo tipo e dimensão que seja 
 produto de cada elemento correspondente às matrizes A e B. Montar o trecho de pesquisa
 sequencial para pesquisar os elementos existentes na matriz C.
 
-program Cap067_Ex7.6m_Pg173
+program Cap07_Ex7.6m_Pg173
 var
     A,B,C: conjunto[1..12] de real
     I,J: inteiro

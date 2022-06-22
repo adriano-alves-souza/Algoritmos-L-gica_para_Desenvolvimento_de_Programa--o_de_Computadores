@@ -1,0 +1,39 @@
+e) Elaborar um programa que leia duas matrizes A e B, cada uma com uma dimensão para 12
+elementos reais. Construir uma matriz C de duas dimensões, sendo a primeira coluna da matriz
+C formada pelos elementos da matriz A multiplicados por 2 e a segunda coluna formada pelos
+elementos da matriz B subtraídos de 5. Apresentar separadamente as matrizes.
+
+program Cap08_Ex8.5e_Pg188
+var
+    A: conjunto[1..12] de real
+    C: conjunto[1..12,1..2] de real
+    I,J: inteiro
+inicio
+    para I de 1 ate 12 passo faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 12 passo faça
+        leia(B[I])
+    fim_para
+
+
+    para I de 1 ate 12 passo faça
+        C[I,1] ← A[I] * 2
+        C[I,2] ← B[I] - 5
+    fim_para
+
+    para I de 1 ate 12 passo faça
+        escreva(A[I])
+    fim_para
+
+    para I de 1 ate 12 passo faça
+        escreva(B[I])
+    fim_para
+
+    para I de 1 ate 12 passo faça
+        para J de 1 ate 2 passo 1 faça
+            escreva(C[I,J])
+        fim_para
+    fim_para
+fim

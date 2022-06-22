@@ -3,7 +3,7 @@ dimensão do tipo vetor. Construir uma matriz Bde mesma dimensão e tipo com os 
 matriz A multiplicados por 5. Montar uma rotina de pesquisa binária, para pesquisar os elementos
 armazenados na matriz B.
 
-program Cap067_Ex7.6b_Pg173
+program Cap07_Ex7.6b_Pg173
 var
     A,B: conjunto[1..8] de inteiro
     I,J,AUX,PESQ,COMEÇO,FINAL,MEIO: inteiro

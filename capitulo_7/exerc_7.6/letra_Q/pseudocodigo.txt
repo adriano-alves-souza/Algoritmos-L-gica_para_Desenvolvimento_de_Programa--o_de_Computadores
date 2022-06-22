@@ -1,7 +1,7 @@
 q) Elaborar um programa que leia dez elementos do tipo cadeia em uma matriz A e apresentá-los
 utilizando pesquisa binária.
 
-program Cap067_Ex7.6q_Pg173
+program Cap07_Ex7.6q_Pg173
 var
     A: conjunto[1..10] de cadeia
     I,J,COMEÇO,FINAL,MEIO: inteiro

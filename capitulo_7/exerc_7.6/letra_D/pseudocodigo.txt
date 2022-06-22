@@ -4,7 +4,7 @@ B também com 12 elementos do tipo real e colocar os elementos em ordem crescent
 uma matriz C, em que cada elemento seja a soma do elemento correspondente das matrizes A
 e B. Colocar em ordem decrescente os elementos da matriz C eapresentar os seus valores.
 
-program Cap067_Ex7.6d_Pg173
+program Cap07_Ex7.6d_Pg173
 var
     A,B,C: conjunto[1..12] de real
     I,J: inteiro

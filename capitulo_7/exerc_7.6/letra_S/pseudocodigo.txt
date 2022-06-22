@@ -1,7 +1,7 @@
 s) Elaborar um programa que leia dez elementos numéricos reais em uma matriz A do tipo vetor e
 apresente esses elementos por meio de pesquisa sequencial.
 
-program Cap067_Ex7.6s_Pg173
+program Cap07_Ex7.6s_Pg173
 var
     A: conjunto[1..10] de real
     I: inteiro

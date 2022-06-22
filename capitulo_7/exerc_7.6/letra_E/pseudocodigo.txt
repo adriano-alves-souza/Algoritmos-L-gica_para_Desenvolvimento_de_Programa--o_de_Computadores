@@ -3,7 +3,7 @@ sendo a matriz A com 20 elementos e a matriz B com 30 elementos. Construir uma m
 C, sendo esta a junção das matrizes A e B. Desta forma, a matriz C deve ter a capacidade de
 armazenar 50 elementos. Apresentar os elementos da matriz C em ordem descendente.
 
-program Cap067_Ex7.6e_Pg173
+program Cap07_Ex7.6e_Pg173
 var
     A: conjunto[1..20] de cadeia
     B: conjunto[1..30] de cadeia

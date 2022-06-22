@@ -4,7 +4,7 @@ primeiro da matriz B, o penúltimo elemento da matriz A deve ser o segundo da ma
 o primeiro elemento da matriz A seja o último da matriz B. Apresentar os elementos da matriz B
 de forma ordenada ascendente.
 
-program Cap067_Ex7.6p_Pg173
+program Cap07_Ex7.6p_Pg173
 var
     A,B: conjunto[1..10] de cadeia
     I,J,AUX: inteiro

@@ -3,7 +3,7 @@ elementos inteiros cada. Construir uma matriz C de mesmo tipo e dimensão, que s
 soma dos quadrados de cada elemento correspondente das matrizes A e B. Apresentar a matriz C
 em ordem decrescente.
 
-program Cap067_Ex7.6k_Pg173
+program Cap07_Ex7.6k_Pg173
 var
     A,B,C: conjunto[1..10] de inteiro
     I,J,AUX: inteiro

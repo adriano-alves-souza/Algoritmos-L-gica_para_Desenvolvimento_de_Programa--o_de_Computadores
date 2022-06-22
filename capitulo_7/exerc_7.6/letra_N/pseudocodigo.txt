@@ -3,7 +3,7 @@ elementos inteiros cada. Construir uma matriz D de mesmo tipo e dimensão que se
 pela soma dos elementos correspondentes às matrizes A, B e C. Montar o trecho de pesquisa
 binária para pesquisar os elementos existentes na matriz D.
 
-program Cap067_Ex7.6n_Pg173
+program Cap07_Ex7.6n_Pg173
 var
     A,B,C,D: conjunto[1..15] de inteiro
     I,J,AUX,PESQ,COMEÇO,FINAL,MEIO: inteiro

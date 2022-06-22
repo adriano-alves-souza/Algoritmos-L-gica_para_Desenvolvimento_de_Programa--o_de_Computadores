@@ -3,7 +3,7 @@ de mesmo tipo e tamanho, em que cada elemento da matriz B seja a metade absoluta
 elemento da matriz A. Apresentar os elementos da matriz A em ordem decrescente e os de B
 em ordem crescente.
 
-program Cap067_Ex7.6i_Pg173
+program Cap07_Ex7.6i_Pg173
 var
     A,B: conjunto[1..15] de inteiro
     I,J,AUX,: inteiro

@@ -1,0 +1,30 @@
+b) Elaborar um programa que leia duas matrizes A e B, cada uma com uma dimensão para sete
+elementos inteiros. Construir uma matriz C de duas dimensões, cuja primeira coluna deve ser
+formada pelos elementos da matriz A e a segunda coluna pelos elementos da matriz B.
+Apresentar a matriz C.
+
+program Cap08_Ex8.5b_Pg187
+var
+    A,B: conjunto[1..7] de inteiro
+    C: conjunto[1..5,1..2] de inteiro
+    I,J: inteiro
+inicio
+    para I de 1 ate 7 passo faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 7 passo faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 7 passo faça
+        C[I,1] ← A[I]
+        C[I,2] ← B[I]
+    fim_para
+
+    para I de 1 ate 7 passo faça
+        para J de 1 ate 2 passo 1 faça
+            escreva(C[I,J])
+        fim_para
+    fim_para
+fim

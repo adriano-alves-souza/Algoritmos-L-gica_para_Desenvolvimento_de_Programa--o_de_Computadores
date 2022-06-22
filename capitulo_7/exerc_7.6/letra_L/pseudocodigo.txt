@@ -3,7 +3,7 @@ elementos reais cada. Construir uma matriz D de mesmo tipo e dimensão que seja 
 cubo da soma dos elementos correspondentes às matrizes A, B e C. Apresentar a matriz D em
 ordem crescente.
 
-program Cap067_Ex7.6l_Pg173
+program Cap07_Ex7.6l_Pg173
 var
     A,B,C,D: conjunto[1..15] de real
     I,J: inteiro

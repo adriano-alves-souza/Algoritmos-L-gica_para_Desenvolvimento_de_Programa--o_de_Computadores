@@ -1,0 +1,36 @@
+g) Elaborar um programa que leia uma matriz A de duas dimensões com quatro linhas e cinco
+colunas, armazenando nessa matriz os valores das temperaturas em graus Celsius. Construir a
+matriz B de mesma dimensão, em que cada elemento seja o valor da temperatura em graus
+Fahrenheit de cada elemento correspondente da matriz A. Apresentar ao final as matrizes A e B.
+
+program Cap08_Ex8.5g_Pg188
+var
+    A,B: conjunto[1..4,1..5] de real
+    I,J: inteiro
+inicio
+    para I de 1 ate 4 passo faça
+        para J de 1 ate 5 passo 1 faça
+            leia(A[I,J])
+        fim_para
+    fim_para
+
+
+    para I de 1 ate 4 passo faça
+        para J de 1 ate 5 passo 1 faça
+            B[I,J] ← 9/5 * A[I,J] + 32
+        fim_para
+    fim_para
+
+
+    para I de 1 ate 4 passo faça
+        para J de 1 ate 5 passo 1 faça
+            escreva(A[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 4 passo faça
+        para J de 1 ate 5 passo 1 faça
+            escreva(B[I,J])
+        fim_para
+    fim_para
+fim

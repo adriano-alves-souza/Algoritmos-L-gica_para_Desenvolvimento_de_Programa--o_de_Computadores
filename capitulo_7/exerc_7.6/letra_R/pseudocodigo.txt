@@ -4,7 +4,7 @@ Os elementos a serem armazenados nas matrizes devem ser do tipo cadeia. Construi
 matriz C com a capacidade de armazenar um total de 15 elementos e executar a junção das
 matrizes A e B na matriz C.Apresentar os dados da matriz C em ordem alfabética descendente.
 
-program Cap067_Ex7.6r_Pg173
+program Cap07_Ex7.6r_Pg173
 var
     A: conjunto[1..10] de cadeia
     B: conjunto[1..5] de cadeia

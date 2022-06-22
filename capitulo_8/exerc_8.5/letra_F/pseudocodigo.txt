@@ -1,0 +1,39 @@
+f) Elaborar um programa que leia uma matriz A de duas dimensões com cinco linhas e quatro
+colunas. Construir uma matriz B de mesma dimensão, em que cada elemento seja o fatorial de
+cada elemento correspondente armazenado na matriz A. Apresentar ao final as matrizes A e B.
+
+program Cap08_Ex8.5f_Pg188
+var
+    A,B: conjunto[1..5,1..4] de inteiro
+    I,J,K: inteiro
+inicio
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 4 passo 1 faça
+            leia(A[I,J])
+        fim_para
+    fim_para
+
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 4 passo 1 faça
+            FAT ← 1
+            para K de 1 ate A[I,J] passo 1 faça
+                FAT ← FAT * K
+            fim_para
+            B[I,J] ← FAT
+        fim_para
+    fim_para
+
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 4 passo 1 faça
+            escreva(A[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 4 passo 1 faça
+            escreva(B[I,J])
+        fim_para
+    fim_para
+fim

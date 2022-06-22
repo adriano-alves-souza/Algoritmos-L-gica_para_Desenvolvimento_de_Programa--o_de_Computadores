@@ -1,7 +1,7 @@
 o) Escrever um programa que leia 15 elementos do tipo inteiro em uma matriz A e apresentar os
 elementos da matriz utilizando a pesquisa binária.
 
-program Cap067_Ex7.6o_Pg173
+program Cap07_Ex7.6o_Pg173
 var
     A: conjunto[1..15] de inteiro
     I,J,AUX,PESQ,COMEÇO,FINAL,MEIO: inteiro

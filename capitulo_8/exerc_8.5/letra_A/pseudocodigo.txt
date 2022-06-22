@@ -1,0 +1,34 @@
+a) Elaborar um programa que leia duas matrizes A e B, cada uma de duas dimensões com cinco
+linhas e três colunas para valores inteiros. Construir uma matriz Cde mesma dimensão, que seja
+formada pela soma dos elementos da matriz A com os elementos da matriz B. Apresentar os
+elementos da matriz C.
+
+program Cap08_Ex8.5a_Pg187
+var
+    A,B,C: conjunto[1..5,1..3] de inteiro
+    I,J: inteiro
+inicio
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 3 passo 1 faça
+            leia(A[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 3 passo 1 faça
+            leia(B[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 3 passo 1 faça
+            C[I,J] ← A[I,J] + B[I,J]
+        fim_para
+    fim_para
+
+    para I de 1 ate 5 passo faça
+        para J de 1 ate 3 passo 1 faça
+            escreva(C[I,J])
+        fim_para
+    fim_para
+fim

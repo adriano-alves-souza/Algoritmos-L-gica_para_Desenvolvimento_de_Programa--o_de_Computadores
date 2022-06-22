@@ -3,7 +3,7 @@ dimensão do tipo vetor. Construir uma matriz B de mesmo tipo e dimensão, em qu
 elemento seja o fatorial do elemento correspondente armazenado na matriz A. Apresentar
 os elementos da matriz B ordenados de forma crescente.
 
-program Cap067_Ex7.6c_Pg173
+program Cap07_Ex7.6c_Pg173
 var
     A,b: conjunto[1..15] de inteiro
     I,J,AUX,FAT: inteiro

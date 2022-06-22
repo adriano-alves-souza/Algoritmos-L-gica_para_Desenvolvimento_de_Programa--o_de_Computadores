@@ -3,7 +3,7 @@ Construir uma matriz B de mesmo tipo, observando a seguinte lei de formação: t
 da matriz B deve ser o cubo do elemento correspondente da matriz A. Montar o trecho de
 pesquisa sequencial para pesquisar os elementos armazenados na matriz B.
 
-program Cap067_Ex7.6f_Pg173
+program Cap07_Ex7.6f_Pg173
 var
     A,B: conjunto[1..30] de real
     I: inteiro

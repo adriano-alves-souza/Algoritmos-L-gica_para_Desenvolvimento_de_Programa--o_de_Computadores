@@ -1,0 +1,56 @@
+u) Elaborar um programa que leia duas matrizes A e B de duas dimensões com quatro linhas e
+cinco colunas. Amatriz A deve ser formada por valores divisíveis por 3 ou 4, enquanto amatriz B
+deve ser formada por valores divisíveis por 5 e 6. As entradas dos valores nas matrizes devem
+ser validadas pelo programa e não pelo usuário. Construir e apresentar a matriz C de mesma
+dimensão e número de elementos que contenha o valor da multiplicação dos elementos da
+matriz A com os elementos correspondentes da matriz B
+
+program Cap08_Ex8.5u_Pg189
+var
+    A,B,C: conjunto[1..4,1..5] de inteiro
+    I,J,R1,R2,N: inteiro
+
+inicio
+
+    para I de 1 ate 4 passo 1 faça
+        J ← 1
+        enquanto (J <= 5) faça
+            leia(N)
+            R1 ← N - 3 * (N div 3)
+            R2 ← N - 4 * (N div 4)
+            se(R1 = 0) .ou. (R2 = 0) então
+                A[I,J] ← N
+                J ← J + 1
+            senão
+                escreva("apenas numeros divisíveis por 3 ou 4")
+            fim_se
+        fim_enquanto
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        J ← 1
+        enquanto (J <= 5) faça
+            leia(N)
+            R1 ← N - 5 * (N div 5)
+            R2 ← N - 6 * (N div 6)
+            se(R1 = 0) .e. (R2 = 0) então
+                B[I,J] ← N
+                J ← J + 1
+            senão
+                escreva("apenas numeros divisíveis por 5 e 6")
+            fim_se
+        fim_enquanto
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        para J de 1 ate 5 passo 1 faça
+            C[I,J] ← A[I,J] * B[I,J]
+        fim_para
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        para J de 1 ate 5 passo 1 faça
+            leia(C[I,J])
+        fim_para
+    fim_para
+fim

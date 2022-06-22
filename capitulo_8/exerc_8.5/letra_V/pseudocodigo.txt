@@ -1,0 +1,54 @@
+v) Elaborar um programa que faça a leitura de duas matrizes A e B de duas dimensões com cinco
+linhas e cinco colunas. A matriz A deve ser formada por valores que não sejam divisíveis por 3,
+enquanto a matriz B deve ser formada por valores que não sejam divisíveis por 6. As entradas
+dos valores nas matrizes devem ser validadas pelo programa e não pelo usuário. Construir e
+apresentar uma matriz C de mesma dimensão e número de elementos que contenha a soma dos
+elementos das matrizes A e B.
+
+program Cap08_Ex8.5v_Pg189
+var
+    A,B,C: conjunto[1..5,1..5] de inteiro
+    I,J,R,N: inteiro
+
+inicio
+
+    para I de 1 ate 5 passo 1 faça
+        J ← 1
+        enquanto (J <= 5) faça
+            leia(N)
+            R ← N - 3 * (N div 3)
+            se .não.(R = 0) então
+                A[I,J] ← N
+                J ← J + 1
+            senão
+                escreva("apenas numeros não divisíveis por 3")
+            fim_se
+        fim_enquanto
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        J ← 1
+        enquanto (J <= 5) faça
+            leia(N)
+            R ← N - 6 * (N div 6)
+            se .não.(R = 0) então
+                B[I,J] ← N
+                J ← J + 1
+            senão
+                escreva("apenas numeros não divisíveis por 6")
+            fim_se
+        fim_enquanto
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        para J de 1 ate 5 passo 1 faça
+            C[I,J] ← A[I,J] + B[I,J]
+        fim_para
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        para J de 1 ate 5 passo 1 faça
+            leia(C[I,J])
+        fim_para
+    fim_para
+fim

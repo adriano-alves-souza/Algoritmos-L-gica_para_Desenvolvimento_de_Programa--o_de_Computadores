@@ -1,0 +1,49 @@
+q) Elaborar um programa que faça a leitura de 20 valores inteiros em uma matriz A de duas
+dimensões com quatro linhas e cinco colunas. Construir amatriz B de uma dimensão para quatro
+elementos que seja formada pelo somatório dos elementos correspondentes de cada linha da
+matriz A. Construir também a matriz C de uma dimensão para cinco elementos que seja formada
+pelo somatório dos elementos correspondentes de cada coluna da matriz A. Ao final o programa
+deve apresentar o somatório dos elementos da matriz B com o somatório dos elementos da
+matriz C.
+
+program Cap08_Ex8.5q_Pg188
+var
+    A: conjunto[1..4,1..5] de inteiro
+    B: conjunto[1..4] de inteiro
+    C: conjunto[1..5] de inteiro
+    I,J,SOMA: inteiro
+
+inicio
+    para I de 1 ate 4 passo 1 faça
+        para J de 1 ate 5 passo 1 faça
+            leia(A[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        SOMA ← 0
+        para J de 1 ate 5 passo 1 faça
+            SOMA ← SOMA + A[I,J]
+        fim_para
+        B[I] ← SOMA
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        SOMA ← 0
+        para J de 1 ate 4 passo 1 faça
+            SOMA ← SOMA + A[I,J]
+        fim_para
+        C[I] ← SOMA
+    fim_para
+
+    SOMA ← 0
+    para I de 1 ate 4 passo 1 faça
+        SOMA ← SOMA + B[I]
+    fim_para
+
+    para I de 1 ate 5 passo 1 faça
+        SOMA ← SOMA + C[I]
+    fim_para
+
+    escreva(SOMA)
+fim

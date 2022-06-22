@@ -1,0 +1,38 @@
+p) Elaborar um programa que leia uma matriz A de duas dimensões com dez linhas e sete colunas.
+Ao final apresentar o total de elementos pares e ímpares existentes na matriz. Apresentar
+também o percentual de elementos pares e ímpares em relação ao total de elementos da matriz.
+Supondo a existência de 20 elementos pares e 50 elementos ímpares, ter-se-ia 28,6% de
+elementos pares e 71,4% de elementos ímpares.
+
+program Cap08_Ex8.5p_Pg188
+var
+    A: conjunto[1..10,1..7] de inteiro
+    I,J,PAR,IMPAR,R: inteiro
+    PERCPAR,PERCIMPAR: real
+
+inicio
+    PAR ← 0
+    IMPAR ← 0
+    
+    para I de 1 ate 10 passo 1 faça
+        para J de 1 ate 7 passo 1 faça
+            leia(A[I,J])
+        fim_para
+    fim_para
+
+    para I de 1 ate 10 passo 1 faça
+        para J de 1 ate 7 passo 1 faça
+            R ← A[I,J] - 2 * (A[I,J] div 2)
+            se(R = 0) então
+                PAR ← PAR + 1
+            senão
+                IMPAR ← IMPAR + 1
+            fim_se
+        fim_para
+    fim_para
+
+    PERCPAR ← PAR / 70 * 100
+    PERCIMPAR ← IMPAR / 70 * 100
+
+    escreva(PAR, PERCIMPAR, IMPAR, PERCIMPAR)
+fim

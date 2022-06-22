@@ -1,0 +1,46 @@
+r) Elaborar um programa que leia quatro matrizes A, B, C e D de uma dimensão com quatro
+elementos. Construir uma matriz E de duas dimensões do tipo 4 x 4, sendo a primeira linha
+formada pelo dobro dos valores dos elementos da matriz A, a segunda linha formada pelo triplo
+dos valores dos elementos da matriz B, a terceira linha formada pelo quádruplo dos valores dos
+elementos da matriz C e a quarta linha formada pelo fatorial dos valores dos elementos da matriz
+D. Apresentar a matriz E.
+
+program Cap08_Ex8.5r_Pg189
+var
+    A,B,C,D: conjunto[1..4] de inteiro
+    E: conjunto[1..4,1..4] de inteiro
+    I,J,FAT: inteiro
+inicio
+    para I de 1 ate 4 passo 1 faça
+        leia(A[I])
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        leia(B[I])
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        leia(C[I])
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        leia(D[I])
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        E[1,I] ← A[I] * 2
+        E[2,I] ← B[I] * 3
+        E[3,I] ← C[I] * 4
+        FAT ← 1
+        para J de 1 ate D[I] passo 1 faça
+            FAT ← FAT * J
+        fim_para
+        E[4,I] ← FAT
+    fim_para
+
+    para I de 1 ate 4 passo 1 faça
+        para J de 1 ate 4 passo 1 faça
+            leia(E[I,J])
+        fim_para
+    fim_para
+fim

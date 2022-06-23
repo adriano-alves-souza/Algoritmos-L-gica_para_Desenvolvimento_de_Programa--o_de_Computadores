@@ -1,0 +1,87 @@
+1. Elaborar um programa que efetue o gerenciamento dos dados de dez registros de uma agenda que
+contenha nomes, endereços e telefones, defina a estrutura de registro apropriada, o diagrama de blocos e
+acodificação de um programa que, por meio de um menu de opções, execute as seguintes etapas:
+a) Cadastrar os dez registros.
+b) Pesquisar um registro de cada vez pelo campo nome (usar o método sequencial).
+c) Classificar por ordem de nome os registros cadastrados.
+d) Apresentar todos os registros.
+e) Sair do programa de cadastro.
+
+program Cap09_Ex9.6_num1_Pg208
+
+tipo
+    CAD_AGENDA: registro
+        NOME: cadeia
+        ENDEREÇO: cadeia
+        TELEFONE: cadeia
+    fim_registro
+
+var
+    AGENDA: conjunto[1..10] de CAD_AGENDA
+    AUX: CAD_AGENDA
+    I,J,OPÇÃO: inteiro
+    RESP,PESQ: cadeia
+    ACHA: logico
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 5) faça
+        escreva("1 → Cadastrar:")
+        escreva("2 → Pesquisar nome")
+        escreva("3 → Classificar por nome")
+        escreva("4 → Exibir registro")
+        escreva("5 → Sair")
+        leia(OPÇÃO)
+
+        se(OPÇÃO = 1) então
+            para I de 1 ate 10 passo 1 faça
+                leia(AGENDA[I].NOME)
+                leia(AGENDA[I].ENDEREÇO)
+                leia(AGENDA[I].TELEFONE)
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 2) então
+            RESP ← "SIM"
+            enquanto(RESP = "SIM") faça
+                leia(PESQ)
+                I ← 1
+                ACHA ← .F.
+                enquanto(I <= 10) .e. (ACHA = .F.) faça
+                    se(PESQ = AGENDA[I].NOME) então
+                        ACHA ← .V.
+                    senão
+                        I ← I + 1
+                    fim_se
+                fim_enquanto
+
+                se(ACHA = .V.) então
+                    escreva(AGENDA[I].NOME)
+                    escreva(AGENDA[I].ENDEREÇO)
+                    escreva(AGENDA[I].TELEFONE)
+                senão
+                    escreva("Nome: ",PESQ," não encontrado.")
+                fim_se
+            fim_enquanto
+        fim_se
+
+        se(OPÇÃO = 3) então
+            para I de 1 ate 9 passo 1 faça
+                para J de I+1 ate 10 passo 1 faça
+                    se(AGENDA[I].NOME > AGENDA[J].NOME) então
+                        AUX ← AGENDA[I]
+                        AGENDA[I] ← AGENDA[J]
+                        AGENDA[J] ← AUX
+                    fim_se
+                fim_para
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 4) então
+            para I de 1 ate 10 passo 1 faça
+                escreva(AGENDA[I].NOME)
+                escreva(AGENDA[I].ENDEREÇO)
+                escreva(AGENDA[I].TELEFONE)
+            fim_para
+        fim_se
+    fim_enquanto
+fim

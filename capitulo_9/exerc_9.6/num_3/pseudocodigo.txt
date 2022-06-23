@@ -1,0 +1,78 @@
+3. Elaborar um programa que armazene o nome e a altura de 15 pessoas com o uso de registros. O
+programa deve usar um menu que execute as seguintes etapas:
+a) Cadastrar os 15 registros.
+b) Apresentar os registros (nome e altura) das pessoas com 1.5m ou menores.
+c) Apresentar os registros (nome e altura) das pessoas com mais de 1.5m.
+d) Apresentar os registros (nome e altura) das pessoas com mais de 1.5m e menos de 2.0m.
+e) Apresentar todos os registros com a média extraída de todas as alturas armazenadas.
+f) Sair do programa de cadastro.
+
+program Cap09_Ex9.6_num3_Pg208
+
+tipo
+    CAD_PESSOAS: registro
+        NOME: cadeia
+        ALTURA: real
+    fim_registro
+var
+    PESSOA: conjunto[1..15] de CAD_PESSOAS
+    I,OPÇÃO: inteiro
+    SOMA,MEDIA: real
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 6) faça
+        escreva("1 → CADASTRAR")
+        escreva("2 → EXIBIR PESSOAS COM 1.5M OU MENOR")
+        escreva("3 → EXIBIR PESSOAS COM MAIS DE 1.5M")
+        escreva("4 → EXIBIR PESSOAS COM 1.5M E MENOS DE 2.0M")
+        escreva("5 → EXIBIR TODAS AS PESSOAS COM MEDIA DAS ALTURAS")
+        escreva("6 → SAIR")
+
+        leia(OPÇÃO)
+
+        se(OPÇÃO = 1) então
+            para I de 1 ate 15 passo 1 faça
+                leia(PESSOA[I].NOME)
+                leia(PESSOA[I].ALTURA)
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 2) então
+            para I de 1 ate 15 passo 1 faça
+                se(PESSOA[I].ALTURA <= 1.5) então
+                    escreva(PESSOA[I].NOME)
+                    escreva(PESSOA[I].ALTURA)
+                fim_se
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 3) então
+            para I de 1 ate 15 passo 1 faça
+                se(PESSOA[I].ALTURA > 1.5) então
+                    escreva(PESSOA[I].NOME)
+                    escreva(PESSOA[I].ALTURA)
+                fim_se
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 4) então
+            para I de 1 ate 15 passo 1 faça
+                se(PESSOA[I].ALTURA > 1.5) .e. (PESSOA[I].ALTURA < 2.0) então
+                    escreva(PESSOA[I].NOME)
+                    escreva(PESSOA[I].ALTURA)
+                fim_se
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 5) então
+            SOMA ← 0
+            para I de 1 ate 15 passo 1 faça
+                escreva(PESSOA[I].NOME)
+                escreva(PESSOA[I].ALTURA)
+                SOMA ← SOMA + PESSOA[I].ALTURA
+            fim_para
+            MEDIA ← SOMA / 15
+            escreva(MEDIA)
+        fim_se
+    fim_enquanto
+fim

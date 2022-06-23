@@ -1,0 +1,114 @@
+2. Elaborar um programa escolar que armazene o nome e as notas bimestrais de 20 alunos de um
+determinado curso, defina a estrutura de registro apropriada, o diagrama de blocos e a codificação de
+um programa que, por meio de ummenu de opções, execute as seguintes etapas:
+a) Cadastrar os 20 registros (após o cadastro dos 20 registros, classificar imediatamente a tabela de dados pelo campo nome).
+b) Pesquisar os 20 registros, de cada vez, pelo campo nome (usar o método de pesquisa binária;
+nessa pesquisa o programa deve também apresentar a média do aluno e as mensagens:
+"Aprovado", caso sua média seja maior ou igual a 5, ou "Reprovado" para média abaixo de 5).
+c) Apresentar todos os registros, médias e a mensagem de aprovação ou reprovação.
+d) Sair do programa de cadastro
+
+tipo
+    BIMESTRE = conjunto[1..4] de real
+    CAD_ALUNOS: registro
+        NOME: cadeia
+        NOTAS: BIMESTRE
+    fim_registro
+
+var
+    ALUNO: conjunto[1..20] de CAD_ALUNOS
+    AUX: CAD_ALUNOS
+    I,J,COMEÇO,FINAL,MEIO,OPÇÃO: inteiro
+    SOMA,MEDIA: real
+    PESQ,RESP: cadeia
+    ACHA: logico
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 4) faça
+        escreva("1 ← CADASTRAR")
+        escreva("2 ← PESQUISAR NOME")
+        escreva("3 ← EXIBIR REGISTROS")
+        escreva("4 ← SAIR")
+        leia(OPÇÃO)
+
+        se(OPÇÃO = 1) então
+            para I de 1 ate 20 passo 1 faça
+                leia(ALUNO[I].NOME)
+                para J de 1 ate 4 passo 1 faça
+                    leia(ALUNO[I].NOTAS[J])
+                fim_para
+            fim_se
+
+            para I de 1 ate 19 passo 1 faça
+                para J de I+1 ate 20 passo 1 faça
+                    se(ALUNO[I].NOME > ALUNO[J].NOME) então
+                        AUX ← ALUNO[I]
+                        ALUNO[I] ← ALUNO[J]
+                        ALUNO[J] ← AUX
+                    fim_se
+                fim_para
+            fim_para
+            
+        fim_se
+
+        se(OPÇÃO = 2) então
+            RESP ← "SIM"
+            enquanto(RESP = "SIM") então
+                leia(PESQ)
+                COMEÇO ← 1
+                FINAL ← 20
+                ACHA ← .F.
+                enquanto(COMEÇO <= FINAL) .e. (ACHA = .F.) faça
+                    MEIO ← (COMEÇO + FINAL) div 2
+                    se(PESQ = ALUNO[MEIO].NOME) então
+                        ACHA ← .V.
+                    senão
+                        se(PESQ < ALUNO[MEIO].NOME) então
+                            FINAL ← MEIO -1
+                        senão
+                            COMEÇO ← MEIO + 1
+                        fim_se
+                    fim_se
+                fim_enquanto
+
+                se(ACHA = .V.) então
+                    escreva(ALUNO[MEIO].NOME)
+                    SOMA ← 0
+                    para I de 1 ate 4 passo 1 faça
+                        escreva(ALUNO[MEIO].NOTAS[I])
+                        SOMA ← SOMA + ALUNO[MEIO].NOTAS[I]
+                    fim_para
+                    
+                    MEDIA ← SOMA / 4
+                    se(MEDIA >= 5) então
+                        escreva(MEDIA,"APROVADO")
+                    senão
+                        escreva(MEDIA,"REPROVADO")
+                    fim_se
+                senão
+                    escreva("Aluno",PESQ,"não encontrado")
+                fim_se
+
+            fim_enquanto
+        fim_se
+
+        se(OPÇÃO = 3) então
+            para I de 1 ate 20 passo 1 faça
+                escreva(ALUNO[I].NOME)
+                    SOMA ← 0
+                    para J de 1 ate 4 passo 1 faça
+                        escreva(ALUNO[I].NOTAS[J])
+                        SOMA ← SOMA + ALUNO[I].NOTAS[J]
+                    fim_para
+                    
+                    MEDIA ← SOMA / 4
+                    se(MEDIA >= 5) então
+                        escreva(MEDIA,"APROVADO")
+                    senão
+                        escreva(MEDIA,"REPROVADO")
+                    fim_se
+            fim_para
+        fim_se
+
+    fim_enquanto
+fim

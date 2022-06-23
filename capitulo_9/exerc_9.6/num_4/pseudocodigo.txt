@@ -1,0 +1,119 @@
+4. Elaborar um programa que gerencie os registros de 20 funcionários, contendo os campos matrícula,
+nome e salário. O programa deve, por meio de um menu, executar as seguintes etapas:
+a) Cadastrar os 20 empregados.
+b) Classificar os registros por número de matrícula.
+c) Pesquisar um determinado empregado pelo número de matrícula (método binário).
+d) Apresentar de forma ordenada os registros dos empregados que recebem salários acima de $1.000.
+e) Apresentar de forma ordenada os registros dos empregados que recebem salários abaixo de $1.000.
+f) Apresentar de forma ordenada os registros dos empregados que recebem salários iguais a $1.000.
+g) Sair do programa de cadastro.
+
+program Cap09_Ex9.6_num4_Pg208
+
+tipo
+    CAD_FUNCIONARIOS: registro
+        MATRICULA: inteiro
+        NOME: cadeia
+        SALARIO: real
+    fim_registro
+var
+    FUNCIONARIO: conjunto[1..20] de CAD_FUNCIONARIOS
+    AUX: CAD_FUNCIONARIOS
+    I,J,COMEÇO,FINAL,MEIO,OPÇÃO,PESQ: inteiro
+    RESP: cadeia
+    ACHA: logico
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 7) faça
+        escreva("1 → Cadastrar os 20 empregados.")
+        escreva("2 → Classificar os registros por número de matrícula.")
+        escreva("3 → Pesquisar número de matrícula.")
+        escreva("4 → Exibir empregados que recebem salários acima de $1.000.")
+        escreva("5 → Exibir empregados que recebem salários abaixo de $1.000.")
+        escreva("6 → Exibir empregados que recebem salários iguais a $1.000.")
+        escreva("7 → Sair do programa de cadastro.")
+        leia(OPÇÃO)
+
+        se(OPÇÃO = 1) então
+            para I de 1 ate 20 passo 1 faça
+                leia(FUNCIONARIO[I].MATRICULA)
+                leia(FUNCIONARIO[I].NOME)
+                leia(FUNCIONARIO[I].SALARIO)
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 2) então
+            para I de 1 ate 19 passo 1 faça
+                para J de I+1 ate 20 passo 1 faça
+                    se(FUNCIONARIO[I].MATRICULA > FUNCIONARIO[J].MATRICULA) então
+                        AUX ← FUNCIONARIO[I]
+                        FUNCIONARIO[I] ← FUNCIONARIO[J]
+                        FUNCIONARIO[J] ← AUX
+                    fim_se
+                fim_para
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 3) então
+            RESP ← "SIM"
+            enquanto(RESP = "SIM") faça
+                leia(PESQ)
+                COMEÇO ← 1
+                FINAL ← 20
+                ACHA ← .F.
+                enquanto(COMEÇO <= FINAL) .e. (ACHA = .F.) faça
+                    MEIO ← (COMEÇO + FINAL) div 2
+                    SE(PESQ = FUNCIONARIO[MEIO].MATRICULA) então
+                        ACHA ← .V.
+                    senão
+                        se(PESQ < FUNCIONARIO[MEIO].MATRICULA) então
+                            FINAL ← MEIO - 1
+                        senão
+                            COMEÇO ← meio + 1
+                        fim_se
+                    fim_se
+                fim_enquanto
+
+                se(ACHA = .V.) então
+                    escreva(FUNCIONARIO[MEIO].MATRICULA)
+                    escreva(FUNCIONARIO[MEIO].NOME)
+                    escreva(FUNCIONARIO[MEIO].SALARIO)
+                senão
+                    escreva("Funcionario ",PESQ," Não encontrado")
+                fim_se
+
+                leia(RESP)
+            fim_enquanto
+        fim_se
+
+        se(OPÇÃO = 4) então
+            para I de 1 ate 20 passo 1 faça
+                se(FUNCIONARIO[I].SALARIO > 1000) então
+                    escreva(FUNCIONARIO[I].MATRICULA)
+                    escreva(FUNCIONARIO[I].NOME)
+                    escreva(FUNCIONARIO[I].SALARIO)
+                fim_se
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 5 então
+            para I de 1 ate 20 passo 1 faça
+                se(FUNCIONARIO[I].SALARIO < 1000) então
+                    escreva(FUNCIONARIO[I].MATRICULA)
+                    escreva(FUNCIONARIO[I].NOME)
+                    escreva(FUNCIONARIO[I].SALARIO)
+                fim_se
+            fim_para
+        fim_se
+
+        se(OPÇÃO = 6) então
+            para I de 1 ate 20 passo 1 faça
+                se(FUNCIONARIO[I].SALARIO = 1000) então
+                    escreva(FUNCIONARIO[I].MATRICULA)
+                    escreva(FUNCIONARIO[I].NOME)
+                    escreva(FUNCIONARIO[I].SALARIO)
+                fim_se
+            fim_para
+        fim_se
+    fim_enquanto
+fim

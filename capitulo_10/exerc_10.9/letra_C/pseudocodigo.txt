@@ -1,0 +1,94 @@
+c) Elaborar um programa que armazene o nome e a altura de 15 pessoas com o uso de registros. O
+programa deve usar um menu que execute as seguintes etapas:
+I) Cadastrar os 15 registros.
+II) Apresentar os registros (nome e altura) das pessoas com 1.5m ou menores.
+II) Apresentar os registros (nome e altura) das pessoas com mais de 1.5m.
+IV) Apresentar os registros (nome e altura) das pessoas com mais de 1.5m e menos de 2.0m.
+V) Apresentar todos os registros com a média extraída de todas as alturas armazenadas.
+VI) Sair do programa de cadastro.
+
+program Cap010_Ex10.9_letra_c_Pg259
+
+CONST = MAX 15
+
+tipo
+    CAD_PESSOAS: registro
+        NOME: cadeia
+        ALTURA: real
+    fim_registro
+
+var
+    PESSOA: conjunto[1..MAX] de CAD_PESSOAS
+    I: inteiro
+
+procedimento CADASTRAR
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            leia(PESSOA[I].NOME)
+            leia(PESSOA[I].ALTURA)
+        fim_para
+    fim
+
+procedimento PESSOAS_COM_1.5M_OU_MENOR
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            se(PESSOA[I].ALTURA <= 1.5) então
+                escreva(PESSOA[I].NOME)
+                escreva(PESSOA[I].ALTURA)
+            fim_se
+        fim_para
+    fim
+
+procedimento PESSOAS_COM_MAIS_DE_1.5M
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            se(PESSOA[I].ALTURA > 1.5) então
+                escreva(PESSOA[I].NOME)
+                escreva(PESSOA[I].ALTURA)
+            fim_se
+        fim_para
+    fim
+
+procedimento PESSOAS_COM_1.5M_E_MENOS_DE_2.0M
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            se(PESSOA[I].ALTURA >= 1.5) .e. (PESSOA[I].ALTURA < 2.0) então
+                escreva(PESSOA[I].NOME)
+                escreva(PESSOA[I].ALTURA)
+            fim_se
+        fim_para
+    fim
+
+procedimento TODAS_AS_PESSOAS_COM_MEDIA_DAS_ALTURAS
+    inicio
+        SOMA ← 0
+        para I de 1 ate MAX passo 1 faça
+            leia(PESSOA[I].NOME)
+            leia(PESSOA[I].ALTURA)
+            SOMA ← SOMA + PESSOA[I].ALTURA
+        fim_para
+        MEDIA ← SOMA / MAX
+        escreva(MEDIA)
+    fim
+
+var
+    OPÇÃO: inteiro
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 6) faça
+        escreva("1 → CADASTRAR")
+        escreva("2 → EXIBIR PESSOAS COM 1.5M OU MENOR")
+        escreva("3 → EXIBIR PESSOAS COM MAIS DE 1.5M")
+        escreva("4 → EXIBIR PESSOAS COM 1.5M E MENOS DE 2.0M")
+        escreva("5 → EXIBIR TODAS AS PESSOAS COM MEDIA DAS ALTURAS")
+        escreva("6 → SAIR")
+        leia(OPÇÃO)
+
+        caso OPÇÃO
+            seja 1 faça CADASTRAR
+            seja 2 faça PESSOAS_COM_1.5M_OU_MENOR
+            seja 3 faça PESSOAS_COM_MAIS_DE_1.5M
+            seja 4 faça PESSOAS_COM_1.5M_E_MENOS_DE_2.0M
+            seja 5 faça TODAS_AS_PESSOAS_COM_MEDIA_DAS_ALTURAS
+    fim_enquanto
+fim

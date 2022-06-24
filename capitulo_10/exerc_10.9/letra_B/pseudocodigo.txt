@@ -1,0 +1,168 @@
+b) Considerando a necessidade de um programa de computador que armazene o nome e as notas bimestrais de 20 alunos do curso de Técnicas de Programação, defina a estrutura de registro apropriada, os diagramas de blocos e a codificação em português estruturado de um programa que, com o uso de subprogramas, apresente um menu e suas respectivas rotinas para a execução das seguintes etapas:
+I) Cadastrar os 20 registros (após o cadastro, fazer a classificação por nome)
+II) Pesquisar os 20 registros, um de cada vez, pelo campo nome (usar o método binário; nessa pesquisa o programa deve também apresentar a média do aluno e as mensagens "Aprovado", caso amédia seja maior ou igual a 5, ou "Reprovado" para média abaixo de 5).
+III) Apresentar todos os registros, médias e a mensagem de aprovação ou reprovação.
+IV) Apresentar apenas os registros e as médias dos alunos aprovados.
+V) Apresentar apenas os registros e as médias dos alunos reprovados.
+VI) Sair do programa de cadastro.
+
+program Cap010_Ex10.9_letra_B_Pg259
+
+CONST = MAX 20
+
+tipo
+    BIMESTRE = conjunto[1..4] de real
+    CAD_ALUNOS: registro
+        NOME: cadeia
+        NOTAS: BIMESTRE
+    fim_registro
+var
+    ALUNO: conjunto[1..MAX] de CAD_ALUNOS
+    I,J: inteiro
+    SOMA,MEDIA: real
+
+procedimento ORGANIZAR
+    var
+        AUX: CAD_ALUNOS
+    inicio
+        para I de 1 ate MAX-1 passo 1 faça
+            para J de I+1 ate MAX passo 1 faça
+                se(ALUNO[I].NOME > ALUNO[J].NOME) então
+                    AUX ← ALUNO[I]
+                    ALUNO[I] ← ALUNO[J]
+                    ALUNO[J] ← AUX
+                fim_se
+            fim_para
+        fim_para
+    fim
+
+procedimento CADASTRAR
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            leia(ALUNO[I].NOME)
+            para J de 1 ate 4 passo 1 faça
+                leia(ALUNO[I].NOTAS[J])
+            fim_para
+        fim_para
+        ORGANIZAR
+    fim
+
+procedimento PESQUISAR
+    var
+        RESP,PESQ: cadeia
+        COMEÇO,FINAL,MEIO: inteiro
+        ACHA: logico
+    inicio
+        RESP ← "SIM"
+        enquanto(RESP = "SIM")
+            leia(PESQ)
+
+            COMEÇO ← 1
+            FINAL ← MAX
+            ACHA ← .F.
+            enquanto(COMEÇO <= FINAL) .e. (ACHA = .F.) faça
+                MEIO ← (COMEÇO + FINAL) div 2
+                se(PESQ = ALUNO[MEIO].NOME) então
+                    ACHA ← .V.
+                senão
+                    se(PESQ < ALUNO[MEIO].NOME) então
+                        FINAL ← MEIO - 1
+                    senão
+                        COMEÇO ← MEIO + 1
+                    fim_se
+                fim_se
+            fim_enquanto
+
+            se(ACHA = .V.) então
+                escreva(ALUNO[MEIO].NOME)
+                SOMA ← 0
+                para I de 1 ate 4 passo 1 faça
+                    escreva(ALUNO[MEIO].NOTAS[I])
+                    SOMA ← SOMA + ALUNO[MEIO].NOTAS[I]
+                fim_para
+                MEDIA ← SOMA / 4
+                se(MEDIA >= 5) então
+                    escreva(MEDIA,"APROVADO")
+                senão
+                    escreva(MEDIA,"REPROVADO")
+                fim_se
+            fim_se
+            leia(RESP)
+        fim_enquanto
+    fim
+
+procedimento EXIBIR_TUDO
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            escreva(ALUNO[I].NOME)
+            SOMA ← 0
+            para J de 1 ate 4 passo 1 faça
+                escreva(ALUNO[I].NOTAS[J])
+                SOMA ← SOMA + ALUNO[I].NOTAS[J]
+            fim_para
+            MEDIA ← SOMA / 4
+            se(MEDIA >= 5) então
+                escreva(MEDIA,"APROVADO")
+            senão
+                escreva(MEDIA,"REPROVADO")
+            fim_se
+        fim_para
+    fim
+
+procedimento EXIBIR_APROVADO
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            SOMA ← 0
+            para J de 1 ate 4 passo 1 faça
+                SOMA ← SOMA + ALUNO[I].NOTAS[J]
+            fim_para
+            MEDIA ← SOMA / 4
+            se(MEDIA >= 5) então
+                escreva(ALUNO[I].NOME)
+                para J de 1 ate 4 passo 1 faça
+                    escreva(ALUNO[I].NOTAS[J])
+                fim_para
+                escreva(MEDIA,"APROVADO")
+            fim_se
+        fim_para
+    fim
+
+procedimento EXIBIR_REPROVADO
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            SOMA ← 0
+            para J de 1 ate 4 passo 1 faça
+                SOMA ← SOMA + ALUNO[I].NOTAS[J]
+            fim_para
+            MEDIA ← SOMA / 4
+            se(MEDIA < 5) então
+                escreva(ALUNO[I].NOME)
+                para J de 1 ate 4 passo 1 faça
+                    escreva(ALUNO[I].NOTAS[J])
+                fim_para
+                escreva(MEDIA,"REPROVADO")
+            fim_se
+        fim_para
+    fim
+
+var
+    OPÇÃO: inteiro
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 6) faça
+        escreva("1 ← CADASTRAR")
+        escreva("2 ← PESQUISAR NOME")
+        escreva("3 ← EXIBIR TODOS OS REGISTROS")
+        escreva("4 ← EXIBIR SO OS APROVADOS")
+        escreva("5 ← EXIBIR SO OS REPROVADOS")
+        escreva("6 ← SAIR")
+        leia(OPÇÃO)
+
+        caso OPÇÃO
+            seja 1 faça CADASTRAR
+            seja 2 faça PESQUISAR
+            seja 3 faça EXIBIR_TUDO
+            seja 4 faça EXIBIR_APROVADO
+            seja 5 faça EXIBIR_REPROVADO
+    fim_enquanto
+fim

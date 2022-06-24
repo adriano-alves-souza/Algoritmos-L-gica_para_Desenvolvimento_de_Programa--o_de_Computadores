@@ -1,0 +1,106 @@
+a) Considerando a necessidade de desenvolver uma agenda que contenha nomes, endereços e
+telefones de dez pessoas, defina a estrutura de registro apropriada, os diagramas de blocos e a
+codificação em português estruturado de um programa que, com o uso de subprogramas,
+apresente um menu e suas respectivas rotinas para a execução das seguintes etapas:
+I) Cadastrar os dez registros.
+II) Pesquisar os dez registros, um de cada vez, pelo campo nome (usar método sequencial).
+III) Classificar por ordem alfabética os registros cadastrados.
+IV) Apresentar todos os registros.
+V) Sair do programa de cadastro.
+
+program Cap010_Ex10.9_letra_A_Pg259
+
+CONST = MAX 10
+tipo
+    CAD_AGENDA: registro
+        NOME: cadeia
+        ENDEREÇO: cadeia
+        TELEFONE: cadeia
+    fim_registro
+
+var
+    AGENDA: conjunto[1..MAX] de CAD_AGENDA
+    I: inteiro
+
+procedimento CADASTRAR
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            leia(AGENDA[I].NOME)
+            leia(AGENDA[I].ENDEREÇO)
+            leia(AGENDA[I].TELEFONE)
+        fim_para
+    fim
+
+procedimento PESQUISAR
+    var
+        RESP,PESQ: cadeia
+        ACHA: logico
+    inicio
+        RESP ← "SIM"
+        enquanto(RESP = "SIM") faça
+            leia(RESP)
+            I ← 1
+            ACHA ← .F.
+            enquanto(I <= MAX) .e. (ACHA = .F.) faça
+                se(PESQ = AGENDA[I].NOME) então
+                    ACHA ← .V.
+                senão
+                    I ← I + 1
+                fim_se
+            fim_enquanto 
+
+            se(ACHA = .V.) então
+                escreva(AGENDA[I].NOME)
+                escreva(AGENDA[I].ENDEREÇO)
+                escreva(AGENDA[I].TELEFONE)
+            senão
+                escreva("NOME: ",PESQ," não encontrado.")
+            fim_se 
+            leia(RESP)
+        fim_enquanto
+    fim
+
+procedimento CLASSIFICAR
+    var
+        AUX: CAD_AGENDA
+        J: inteiro
+    inicio
+        para I de 1 ate MAX-1 passo 1 faça
+            para J de I+1 ate MAX passo 1 faça
+                se(AGENDA[I].NOME > AGENDA[J].NOME) então
+                    AUX ← AGENDA[I]
+                    AGENDA[I] ← AGENDA[J]
+                    AGENDA[J] ← AUX
+                fim_se
+            fim_para
+        fim_para
+    fim
+
+procedimento EXIBIR
+    inicio
+        para I de 1 ate MAX passo 1 faça
+            escreva(AGENDA[I].NOME)
+            escreva(AGENDA[I].ENDEREÇO)
+            escreva(AGENDA[I].TELEFONE)
+        fim_para
+    fim
+
+var
+    OPÇÃO: inteiro
+inicio
+    OPÇÃO ← 0
+    enquanto(OPÇÃO <> 5) faça
+        escreva("1 → Cadastrar")
+        escreva("2 → Pesquisar nome")
+        escreva("3 → Classificar por nome")
+        escreva("4 → Exibir registro")
+        escreva("5 → Sair")
+        leia(OPÇÃO)
+
+        caso OPÇÃO
+            seja 1 faça CADASTRAR
+            seja 2 faça PESQUISAR
+            seja 3 faça CLASSIFICAR
+            seja 4 faça EXIBIR
+    fim_enquanto
+fim

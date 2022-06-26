@@ -5,12 +5,12 @@ exemplo, se for usado no programa principal o procedimento POTÊNCIA(2,3), deve 
 apresentado o valor 8. Resolva a exponenciação com uso de laço. Não use o operador de
 exponenciação.
 
-program Cap010_Ex10.9_num_3_letra_D_Pg260
+program Cap010_Ex10.9_num_4_letra_D_Pg262
 
 var
     base,exp: inteiro
 
-procedimento POTENCIA(base: inteiro, exp: inteiro; var resu: inteiro)
+função POTENCIA(base: inteiro, exp: inteiro): inteiro
     var
         i: inteiro
     inicio
@@ -18,12 +18,10 @@ procedimento POTENCIA(base: inteiro, exp: inteiro; var resu: inteiro)
         para i de 1 ate exp passo 1 faça
             resu ← resu * base
         fim_para
-
+        POTENCIA ← resu
     fim
-var
-    resp: inteiro
+
 inicio
     leia(base,exp)
-    POTENCIA(base,exp,resp)
-    escreva(resp)
+    escreva(POTENCIA(base,exp))
 fim

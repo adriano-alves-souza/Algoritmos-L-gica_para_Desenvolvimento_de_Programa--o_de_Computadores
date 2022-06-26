@@ -2,7 +2,7 @@ j) Elaborar um programa de computador que apresente a mensagem "Este valor é di
 3". Deve ser solicitado pelo programa principal o valor a ser verificado. Caso o valor não atenda
 à condição desejada, a sub-rotina deve apresentar a mensagem "Valor inválido".
 
-program Cap010_Ex10.9_num_2_letra_J_Pg261
+program Cap010_Ex10.9_num_3_letra_J_Pg261
 
 var
     n: inteiro

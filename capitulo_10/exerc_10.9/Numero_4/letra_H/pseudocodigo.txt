@@ -1,0 +1,19 @@
+h) Elaborar um programa que apresente o valor da conversão em dólar (US$) de um valor lido
+em real (R$). O programa deve solicitar o valor da cotação do dólar e também a quantidade de
+reaisdisponível com o usuário.
+
+program Cap010_Ex10.9_num_4_letra_H_Pg262
+
+var
+    cotação,valor: real
+
+função CONVERSOR(cotação ,valor: real):real
+    inicio
+        CONVERSOR ← valor * cotação
+    fim
+
+
+inicio
+    leia(valor,cotação)
+    escreva(CONVERSOR(valor,cotação))
+fim

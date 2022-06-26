@@ -6,7 +6,7 @@ program Cap010_Ex10.9_num_2_letra_H_Pg261
 var
     c:real
 
-procedimento FAHRENHEIT(c: inteiro)
+procedimento FAHRENHEIT(c: real)
     var
         f:real
     inicio

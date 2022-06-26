@@ -1,7 +1,7 @@
 o) Elaborar um programa de computador que apresente o resultado do valor de uma fatorial de um
 número qualquer.
 
-program Cap010_Ex10.9_num_2_letra_O_Pg261
+program Cap010_Ex10.9_num_3_letra_O_Pg261
 
 var
     n: inteiro

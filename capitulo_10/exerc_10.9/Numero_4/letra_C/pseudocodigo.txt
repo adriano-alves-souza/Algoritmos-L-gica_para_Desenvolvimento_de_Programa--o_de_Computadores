@@ -1,0 +1,21 @@
+c) Criar um algoritmo que calcule o valor de uma prestação em atraso. Para tanto, utilizar a
+fórmula PREST = VALOR + (VALOR* (TAXA/100) *TEMPO). Apresentar o valor da prestação.
+
+program Cap010_Ex10.9_num_4_letra_C_Pg262
+
+var
+    valor,taxa: real
+    tempo: inteiro
+
+função CALCULO(valor: real,taxa: real,tempo: inteiro):real
+    inicio
+        CALCULO ← valor + (valor * (taxa/100) * tempo)
+    fim
+
+
+inicio
+    leia(valor)
+    leia(taxa)
+    leia(tempo)
+    escreva(CALCULO(valor,taxa,tempo))
+fim

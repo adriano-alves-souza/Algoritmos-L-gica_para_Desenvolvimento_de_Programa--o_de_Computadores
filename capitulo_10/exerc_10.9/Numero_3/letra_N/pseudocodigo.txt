@@ -2,7 +2,7 @@ n) Elaborar um programa de computador que leia nome e sexo de um indivíduo. Por
 -rotina o programa deve apresentar a mensagem "llmo. Sr.", caso o sexo seja masculino, e "llma.
 Sra.", caso o sexo seja feminino. Apresentar junto com cada mensagem o nome do indivíduo.
 
-program Cap010_Ex10.9_num_2_letra_N_Pg261
+program Cap010_Ex10.9_num_3_letra_N_Pg261
 
 procedimento SALDAÇÃO(sexo:caractere; var resu: cadeia)
     inicio

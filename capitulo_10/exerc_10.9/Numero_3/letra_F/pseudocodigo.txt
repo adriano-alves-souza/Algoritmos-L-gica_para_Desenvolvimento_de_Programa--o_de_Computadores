@@ -1,7 +1,7 @@
 f) Elaborar um programa que leia três valores (A, B e C) e apresente como resultado a soma dos
 quadrados dos três valores lidos.
 
-program Cap010_Ex10.9_num_2_letra_F_Pg261
+program Cap010_Ex10.9_num_3_letra_F_Pg261
 
 var
     a,b,c: inteiro

@@ -2,7 +2,7 @@ i) Elaborar um programa que apresente o valor da conversão em real (R$) de um v
 dólar (US$). Devem ser solicitados por meio do programa principal o valor da cotação do dólar e
 aquantidade de dólar disponível.
 
-program Cap010_Ex10.9_num_2_letra_I_Pg261
+program Cap010_Ex10.9_num_3_letra_I_Pg261
 
 var
     cotação,valor: real

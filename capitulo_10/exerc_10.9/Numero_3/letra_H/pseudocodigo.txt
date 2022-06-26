@@ -1,12 +1,12 @@
 h) Elaborar um programa de computador que apresente o valor de uma temperatura em graus
 Fahrenheit. O programa deve ler a temperatura em graus Celsius.
 
-program Cap010_Ex10.9_num_2_letra_H_Pg261
+program Cap010_Ex10.9_num_3_letra_H_Pg261
 
 var
     c:real
 
-procedimento FAHRENHEIT(c: inteiro; var f:real)
+procedimento FAHRENHEIT(c: real; var f:real)
     inicio
         f ← 9/5 * c + 32
     fim
@@ -17,4 +17,4 @@ inicio
     leia(c)
     FAHRENHEIT(c,resp)
     escreva(resp)
-fims
+fim

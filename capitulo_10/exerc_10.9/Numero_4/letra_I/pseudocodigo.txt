@@ -1,0 +1,17 @@
+i) Elaborar um programa que apresente o valor de uma temperatura em graus Celsius. 
+O programa deve ler a temperatura em graus Fahrenheit.
+
+program Cap010_Ex10.9_num_4_letra_I_Pg262
+
+var
+    f:real
+
+função Celsius(f: real): real
+    inicio
+        Celsius ← 5/9 * (f - 32)
+    fim
+
+inicio
+    leia(f)
+    escreva(Celsius(f))
+fim

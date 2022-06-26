@@ -1,0 +1,19 @@
+f) Elaborar um programa que leia três valores (A, B e C) e apresente como resultado a soma dos
+quadrados dos três valores lidos.
+
+program Cap010_Ex10.9_num_2_letra_F_Pg261
+
+var
+    a,b,c: inteiro
+
+procedimento CALCULO(a,b,c: inteiro; var soma: inteiro)
+    inicio
+        soma ← a↑2 + b↑2 + c↑2
+    fim
+var
+    resp: inteiro
+inicio
+    leia(a,b,c)
+    CALCULO(a,b,c,resp)
+    escreva(resp)
+fim

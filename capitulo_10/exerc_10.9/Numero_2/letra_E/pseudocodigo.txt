@@ -1,0 +1,24 @@
+e) Elaborar um programa que leia um número inteiro e apresente uma mensagem informando se o
+numero e par ou impar.
+
+program Cap010_Ex10.9_num_2_letra_E_Pg261
+
+var
+    n: inteiro
+
+procedimento CALCULO(n: inteiro)
+    var
+        resu: inteiro
+    inicio
+        resu ← n - 2 * (n div 2)
+        se(resu = 0) então
+            escreva("Numero: ",n," e par.")
+        senão
+            escreva("Numero: ",n," e impar.")
+        fim_se
+    fim
+
+inicio
+    leia(n)
+    CALCULO(n)
+fim

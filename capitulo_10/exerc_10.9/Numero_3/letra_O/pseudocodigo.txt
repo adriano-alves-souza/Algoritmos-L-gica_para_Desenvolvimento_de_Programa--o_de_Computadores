@@ -1,0 +1,26 @@
+o) Elaborar um programa de computador que apresente o resultado do valor de uma fatorial de um
+número qualquer.
+
+program Cap010_Ex10.9_num_2_letra_O_Pg261
+
+var
+    n: inteiro
+
+procedimento FATORIAL(n:inteiro; var fat: inteiro)
+    var
+        i:inteiro
+    inicio
+        fat ← 1
+        para i de 1 ate n passo 1 faça
+            fat ← fat * i
+        fim_para
+    fim
+
+var
+    resp: inteiro
+
+inicio
+    leia(n)
+    FATORIAL(n,resp)
+    escreva(resp)
+fim

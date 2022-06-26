@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="4xdz5srwMQNEojQXBxyn" name="Página-1">
+        <mxGraphModel dx="1069" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-1" value="&lt;span class=&quot;fontstyle0&quot; style=&quot;font-size: 15px;&quot;&gt;h) Elaborar um programa de computador que apresente o valor de uma temperatura em graus&lt;br style=&quot;font-size: 15px;&quot;&gt;Fahrenheit. O programa deve &lt;/span&gt;&lt;span style=&quot;color: rgb(17, 33, 71); font-size: 15px;&quot; class=&quot;fontstyle0&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;fontstyle0&quot; style=&quot;font-size: 15px;&quot;&gt;er a temperatura em graus Ce&lt;/span&gt;&lt;span style=&quot;color: rgb(17, 33, 71); font-size: 15px;&quot; class=&quot;fontstyle0&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;fontstyle0&quot; style=&quot;font-size: 15px;&quot;&gt;sius&lt;/span&gt;&lt;span style=&quot;color: rgb(17, 33, 71); font-size: 15px;&quot; class=&quot;fontstyle0&quot;&gt;.&lt;/span&gt; " style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry width="640" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="nHbtzkrkmilF0HNDiJAP-2" target="nHbtzkrkmilF0HNDiJAP-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-2" value="&lt;span style=&quot;text-align: left;&quot;&gt;Fahrenheit(c,f)&lt;/span&gt;" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start;fontSize=15;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="80" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-3" value="retornar(f)" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start;fontSize=15;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="210" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zQpaX1nwV7XP8Fl9HxdW-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nHbtzkrkmilF0HNDiJAP-4" target="nHbtzkrkmilF0HNDiJAP-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-4" value="f ← 9/5 * c + 32" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="140" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="zQpaX1nwV7XP8Fl9HxdW-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nHbtzkrkmilF0HNDiJAP-6" target="nHbtzkrkmilF0HNDiJAP-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-6" value="resp" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="340" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="nHbtzkrkmilF0HNDiJAP-10" target="nHbtzkrkmilF0HNDiJAP-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-10" value="c" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="160" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-11" value="fim" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="420" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="nHbtzkrkmilF0HNDiJAP-12" target="nHbtzkrkmilF0HNDiJAP-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-12" value="inicio" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="80" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zQpaX1nwV7XP8Fl9HxdW-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nHbtzkrkmilF0HNDiJAP-14" target="nHbtzkrkmilF0HNDiJAP-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nHbtzkrkmilF0HNDiJAP-14" value="&lt;span style=&quot;text-align: left;&quot;&gt;Fahrenheit(c,resp)&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=15;strokeWidth=2;rounded=1;arcSize=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="260" width="180" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

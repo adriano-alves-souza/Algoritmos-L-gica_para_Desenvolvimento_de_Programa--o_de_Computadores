@@ -1,0 +1,23 @@
+b) Elaborar um programa de computador que calcule e apresente o valor do somatório dos N
+primeiros números inteiros, definidos por um operador (1+2+3+4+5+6+7+...+N).
+
+program Cap010_Ex10.9_num_2_letra_B_Pg260
+
+var
+    n: inteiro
+
+procedimento CALCULO(n:inteiro)
+    var
+        soma,i: inteiro
+    inicio
+        soma ← 0
+        para i de 1 ate n passo 1 faça
+            soma ← soma + i
+        fim_para
+        escreva(soma)
+    fim
+
+inicio
+    leia(n)
+    CALCULO(n)
+fim

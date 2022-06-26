@@ -1,0 +1,27 @@
+c) Escrever um programa que calcule e apresente a série de Fibonacci de N termos. A série de
+Fibonacci é formada pela sequência 1, 1, 2, 3, 5, 8, 13, 21, 34... etc., a qual se caracteriza pela
+soma de um termo posterior com o seu anterior subsequente. Apresentar o resultado.
+
+program Cap010_Ex10.9_num_2_letra_C_Pg260
+
+var
+    n: inteiro
+
+procedimento FIBONACCI(n:inteiro)
+    var
+        i,anterior,proximo,atual: inteiro
+    inicio
+        anterior ← 0
+        atual ← 1
+        para i de 1 ate n passo 1 faça
+            escreva(anterior)
+            proximo ← anterior + atual
+            anterior ← atual
+            atual ← proximo
+        fim_para
+    fim
+
+inicio
+    leia(n)
+    FIBONACCI(n)
+fim

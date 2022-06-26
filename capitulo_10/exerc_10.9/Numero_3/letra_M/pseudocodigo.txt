@@ -1,0 +1,24 @@
+m) Elaborar um programa que apresente como resultado um número positivo, mesmo que a
+entrada tenha sido feita com um valor negativo.
+
+program Cap010_Ex10.9_num_2_letra_M_Pg261
+
+var
+    n: inteiro
+
+procedimento POSITIVO(n: inteiro; var resu: inteiro)
+    inicio
+        se(n < 0) então
+            resu ← n * -1
+        senão
+            resu ← n
+        fim_se
+    fim
+
+var
+    resp: inteiro
+inicio
+    leia(n)
+    POSITIVO(n,resp)
+    escreva(resp)
+fim

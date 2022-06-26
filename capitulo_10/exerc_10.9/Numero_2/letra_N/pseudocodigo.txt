@@ -1,0 +1,22 @@
+n) Elaborar um programa de computador que leia nome e sexo de um indivíduo. Por meio de uma sub-
+-rotina o programa deve apresentar a mensagem "llmo. Sr.", caso o sexo seja masculino, e "llma.
+Sra.", caso o sexo seja feminino. Apresentar junto com cada mensagem o nome do indivíduo.
+
+program Cap010_Ex10.9_num_2_letra_N_Pg261
+
+procedimento SALDAÇÃO(nome:cadeia,sexo:caractere)
+    inicio
+        se(sexo = "m") então
+            escreva("llmo. Sr.",nome)
+        senão
+            escreva("llma. Sra.", nome)
+        fim_se
+    fim
+
+var
+    nome: cadeia
+    sexo: caractere
+inicio
+    leia(nome,sexo)
+    SALDAÇÃO(nome,sexo)
+fim

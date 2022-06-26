@@ -1,0 +1,29 @@
+k) Elaborar um programa que apresente a mensagem "Este valor é divisível por 2 ou 3". Deve ser
+solicitado pelo programa principal o valor a ser verificado. Caso o valor não atenda à condição
+desejada, a sub-rotina deve apresentar a mensagem "Valor inválido".
+
+program Cap010_Ex10.9_num_2_letra_K_Pg261
+
+var
+    n: inteiro
+
+procedimento MSG(n:inteiro; var resu: cadeia)
+    var
+        r1,r2:inteiro
+    inicio
+        r1 ← n - 2 * (n div 2)
+        r2 ← n - 3 * (n div 3)
+        se(r1 = 0) .ou. (r2 = 0) então
+            resu ← "Este valor é divisível por 2 ou 3"
+        senão
+            resu ← "Valor inválido"
+        fim_se
+    fim
+
+var
+    resp: cadeia
+inicio
+    leia(n)
+    MSG(n,resp)
+    escreva(resp)
+fim

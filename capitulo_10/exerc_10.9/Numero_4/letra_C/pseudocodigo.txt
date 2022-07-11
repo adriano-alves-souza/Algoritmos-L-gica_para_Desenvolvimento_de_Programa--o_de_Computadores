@@ -3,16 +3,14 @@ fórmula PREST = VALOR + (VALOR* (TAXA/100) *TEMPO). Apresentar o valor da prest
 
 program Cap010_Ex10.9_num_4_letra_C_Pg262
 
-var
-    valor,taxa: real
-    tempo: inteiro
-
 função CALCULO(valor: real,taxa: real,tempo: inteiro):real
     inicio
         CALCULO ← valor + (valor * (taxa/100) * tempo)
     fim
 
-
+var
+    valor,taxa: real
+    tempo: inteiro
 inicio
     leia(valor)
     leia(taxa)

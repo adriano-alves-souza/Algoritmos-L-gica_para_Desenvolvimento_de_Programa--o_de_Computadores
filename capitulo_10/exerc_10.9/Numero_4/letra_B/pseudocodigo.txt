@@ -4,9 +4,6 @@ soma de um termo posterior com o seu anterior subsequente. Apresentar o resultad
 
 program Cap010_Ex10.9_num_4_letra_B_Pg262
 
-var
-    n,i: inteiro
-
 função FIBONACCI(n:inteiro):inteiro
     var
         proximo,atual: inteiro
@@ -20,7 +17,8 @@ função FIBONACCI(n:inteiro):inteiro
         fim_para
         FIBONACCI ← anterior
     fim
-
+var
+    i,n: inteiro 
 
 inicio
     leia(n)

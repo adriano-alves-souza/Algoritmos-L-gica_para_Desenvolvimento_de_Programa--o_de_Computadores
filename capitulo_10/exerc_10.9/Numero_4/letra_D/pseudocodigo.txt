@@ -7,8 +7,6 @@ exponenciação.
 
 program Cap010_Ex10.9_num_4_letra_D_Pg262
 
-var
-    base,exp: inteiro
 
 função POTENCIA(base: inteiro, exp: inteiro): inteiro
     var
@@ -20,6 +18,8 @@ função POTENCIA(base: inteiro, exp: inteiro): inteiro
         fim_para
         POTENCIA ← resu
     fim
+var
+    base,exp: inteiro
 
 inicio
     leia(base,exp)

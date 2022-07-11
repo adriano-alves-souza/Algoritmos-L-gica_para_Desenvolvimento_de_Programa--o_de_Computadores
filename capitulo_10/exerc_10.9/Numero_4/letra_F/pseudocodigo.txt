@@ -3,15 +3,14 @@ da soma dos três valores lidos.
 
 program Cap010_Ex10.9_num_4_letra_F_Pg262
 
-var
-    a,b,c: inteiro
 
 função CALCULO(a,b,c: inteiro): inteiro
     inicio
         CALCULO ← (a+b+c) ↑ 2
     fim
 
-
+var
+    a,b,c: inteiro
 inicio
     leia(a,b,c)
     escreva(CALCULO(a,b,c))

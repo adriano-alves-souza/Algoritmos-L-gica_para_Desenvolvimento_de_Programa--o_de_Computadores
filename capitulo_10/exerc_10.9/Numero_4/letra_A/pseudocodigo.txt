@@ -3,9 +3,6 @@ primeiros números inteiros, definidos por um operador (1+2+3+4+5+6+7+...+N).
 
 program Cap010_Ex10.9_num_4_letra_A_Pg261
 
-var
-    n: inteiro
-
 função CALCULO(n:inteiro): inteiro
     var
         i: inteiro

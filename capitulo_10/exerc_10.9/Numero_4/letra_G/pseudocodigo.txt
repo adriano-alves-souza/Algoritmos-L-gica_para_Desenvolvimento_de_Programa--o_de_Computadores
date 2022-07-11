@@ -4,15 +4,14 @@ aquantidade de dólar disponível.
 
 program Cap010_Ex10.9_num_4_letra_G_Pg262
 
-var
-    cotação,valor: real
 
 função CONVERSOR(cotação ,valor: real):real
     inicio
         CONVERSOR ← valor / cotação
     fim
 
-
+var
+    cotação,valor: real
 inicio
     leia(valor,cotação)
     escreva(CONVERSOR(valor,cotação))
